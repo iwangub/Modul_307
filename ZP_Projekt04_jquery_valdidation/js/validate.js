@@ -1,11 +1,4 @@
 $(document).ready(function () {
-
-	// Testing Git Changes
-
-	alert("Changes made");
-
-
-
 	//eigene Methoden einbauen 
 
 	/////////////////////
