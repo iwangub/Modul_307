@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 			username: {
 				required: true,
-				//		regex_namen: true,
+				regex_namen: true,
 				minlength: 3,
 				remote: {
 					url: "pages/user.php",
@@ -92,7 +92,7 @@ $(document).ready(function () {
 				regex_namen: true,
 				minlength: 3,
 				remote: {
-					url: "user.php",
+					url: "../php/user.php",
 					type: "post"
 				}
 			},
@@ -167,7 +167,11 @@ $(document).ready(function () {
 			password: {
 				required: "Passwort angeben!"
 			},
-			confirmPassword: "Passwort bestätigen!"
+
+			confirmPassword: {
+				required: "Passwort bestätigen!",
+				equalTo: "Passwort muss übereinstimmen!"
+			}
 		},
 
 		submitHandler: function (form) {
