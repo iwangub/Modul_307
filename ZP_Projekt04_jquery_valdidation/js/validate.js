@@ -1,40 +1,47 @@
 $(document).ready(function () {
-	//eigene Methoden einbauen 
-
 	/////////////////////
-	// nur Buchstaben und Nachname mind. 3 Zeichen
-	// Regex für normale Namen //
+	// Regex for names //
 	jQuery.validator.addMethod("regex_namen", function (value, element) {
 		return this.optional(element) || /^[a-zA-ZüÜäÄöÖéèàâç ]*$/.test(value);
 	}, "Ungültige Zeichen!")
-	jQuery.validator.classRuleSettings.namen = { namen: true };
+	jQuery.validator.classRuleSettings.regex_namen = { regex_namen: true };
 	/////////////////////
 
 
 	/////////////////////
-	// Regex für Postleitzahl (4 oder 5stellig)
-	// Regex für PLZ
+	// Regex for PLZ //
 	jQuery.validator.addMethod("regex_plz", function (value, element) {
-		return this.optional(element) || /^[0-9]*$/.test(value);
+		return this.optional(element) || /^([0-9\s\(\)\+\-\/]{4,5})*$/.test(value);
 	}, "Nur Zahlen angeben!")
 	jQuery.validator.classRuleSettings.regex_plz = { regex_plz: true };
 	/////////////////////
 
 
 	/////////////////////
-	// Regex für E-Mails @ Zeichen und mind 2 Stellen bei der top level domain
-	// Regex für E-Mail
+	// Regex for E-Mail //
 	jQuery.validator.addMethod("regex_email", function (value, element) {
-		return this.optional(element) || /^[A-Za-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(value);
+		return this.optional(element) || /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
 	}, "Keine gültige Mail Adresse!")
 	jQuery.validator.classRuleSettings.regex_email = { regex_email: true };
 	/////////////////////
 
 
 	/////////////////////
-	// Regex für Geburtsdatum - nur Datum
+	// Regex for Birthdate //
+	jQuery.validator.addMethod("regex_birth", function (value, element) {
+		return this.optional(element) || /^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/.test(value);
+	}, "Kein Datum?")
+	jQuery.validator.classRuleSettings.regex_birth = { regex_birth: true };
 	/////////////////////
 
+
+	/////////////////////
+	// Regex for Street //
+	jQuery.validator.addMethod("regex_street", function (value, element) {
+		return this.optional(element) || /^[a-zA-Z0-9 .,]+$/.test(value);
+	}, "Geben Sie die Strasse ein und Nummer")
+	jQuery.validator.classRuleSettings.regex_street = { regex_street: true };
+	/////////////////////
 
 	//// Login validation ////
 	$("#formLogin").validate({
