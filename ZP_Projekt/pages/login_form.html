@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Landing Page Projektarbeit</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <div class="myForm">
+            <!-- onSubmit()-->
+            <form action="submit.php" onsubmit="return validate()" method="POST" class="row g-3" id="myForm">
+                <legend>Mein Formular:</legend>
+
+                <!-- ## Textfield ## -->
+
+                <div class="mb-3 col-md-6">
+                    <label for="vname" class="form-label">Vorname *</label>
+                    <input type="text" name="vname" class="form-control" id="vname">
+                    <label id="vnameError"></label>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="nname" class="form-label">Name *</label>
+                    <input type="text" name="nname" class="form-control" id="nname">
+                    <label id="nnameError"></label>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="adresse" class="form-label">Adresse *</label>
+                    <input type="text" name="adresse" class="form-control" id="adresse">
+                    <label id="adresseError"></label>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="plz" class="form-label">Postleitzahl *</label>
+                    <input type="text" name="plz" class="form-control" id="plz">
+                    <label id="plzError"></label>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="telefon" class="form-label">Telefon *</label>
+                    <input type="text" name="telefon" class="form-control" id="telefon">
+                    <label id="telefonError"></label>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="mail" class="form-label">E-Mail Adresse *</label>
+                    <input type="text" name="mail" class="form-control" id="mail">
+                    <label id="mailError"></label>
+                </div>
+
+
+                <!-- ## Dropdown Liste ## -->
+                <div class="mb-3 col-md-6">
+                    <label for="">Sortiment</label>
+                    <select name="sortiment" class="form-select" aria-label="Default select example">
+                        <option value="optische_kohaerenztomographie">Optische Kohärenztomographie</option>
+                        <option value="sonografie">Sonografie</option>
+                        <option value="magnetresonanztomographie">Magnetresonanztomographie</option>
+                        <option value="computertomograhpie">Computertomograhpie</option>
+                        <option value="szintigraphie">Szintigraphie</option>
+                        <option value="positions_emissions_tomographie">Positions-Emissions-Tomographie</option>
+                    </select>
+                </div>
+
+
+                <!-- ## Checkboxes ## keine ID's, name als array | label braucht keine for= -->
+                <div class="form-group col-md-6">
+                    <label>Branche: </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="branche[]">
+                        <label class="form-check-label">
+                            Krankenhaus
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="branche[]">
+                        <label class="form-check-label">
+                            Forschung
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="branche[]">
+                        <label class="form-check-label">
+                            Bildung
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="branche[]">
+                        <label class="form-check-label">
+                            Endkunden
+                        </label>
+                    </div>
+                </div>
+
+
+                <!-- ## TextArea ## -->
+                <div class="form-group">
+                    <label for="mittelung">Mittelung</label>
+                    <textarea class="form-control" name="mittelung" id="mittelung" rows="3"></textarea>
+                </div>
+
+
+                <!-- ## TextArea ## -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="newsletter" id="newsletter">
+                    <label class="form-check-label" for="newsletter">
+                        Newsletter
+                    </label>
+                </div>
+                <div class="mb-3"></div>
+
+                <!-- ## Submit button  -->
+                <button type="submit" class="btn btn-primary mb-5">Submit</button>
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Formular">
+		<meta name="keywords" content="Formular">
+		<meta name="Author" content="Narcisa Grgic">
+
+		<title>Formular - Erste Schritte</title>
+		
+		<style>
+		#wrapper {
+			padding-left: 20px;
+			width: 70%;
+			margin: 0 auto;
+		}
+        
+       		
+		body {
+			font-family: verdana, sans-serif;
+			font-size: 16px;
+			color: #000;
+		}
+		label {
+			display: inline-block;
+			width: 100px;
+			margin: 2px 0;
+		}
+		
+		.margright {
+		margin-right: 5px;
+		}	
+		.right {
+			margin-left: 105px;
+		}	
+		textarea {margin-left: 105px;}
+		
+		.news {margin: 10px 10px 20px 0;}
+        
+        .senden {width: 50%; float: left;}
+        .cxl {width: 50%; float: right;}
+		
+		.box1 {
+			font-style: italic; 
+			font-weight: bold;
+			font-size: 0.95em;
+		}
+            
+       .fst {margin-left:0;}
+		
+		fieldset {
+			border: 2px dotted #bab3b3;
+            border-radius: 5px;
+            margin: 10px 0;
+		
+		}
+		
+		legend {
+			font-weight: bold;
+			background-color: white;
+			padding: 0 5px;
+		}
+		
+		form {
+			width: 70%;
+		}
+		
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">	
+			<form name="formular" method="post" action="form.php">
+				<!-- Generelle Einstiegsinformationen für den Kunden. Dient als Hilfe zum Ausfüllen -->
+				<div class="box1">
+					<h1>Kontakt</h1>
+					<p>Liebe Kundin, lieber Kunde! Wir freuen uns, dass Sie auf unserer Seite sind. Um ein wenig Daten zu sammeln, sind wir Ihnen sehr sehr dankbar, wenn Sie unser Formular ausfüllen und retournieren. Nur so lernen wir! Herzliche Grüsse, Ihr Formular Team</p>
+					<p>Wichtig: Die mit (*) gekennzeichneten Felder sind Pflichtfelder!</p>
+				</div>
+				<!--Informationen über den user -->
+				<fieldset><legend>Koordinaten</legend>
+					<label for="firma">Firma (*)</label>
+					<input name="firma" type="text" id="firma" size="24" required autofocus>
+					<br />
+					<label for="vorname">Vorname</label>
+					<input name="vorname" type="text" id="vorname" size="24">
+					<br />
+					<label for="name">Name (*)</label>
+					<input name="name" type="text" id="name" size="24" required>
+					<br />
+					<label for="adresse">Adresse</label>
+					<input name="adresse" id="adresse" type="text" size="24">
+					<br />
+					<label>PLZ / Ort</label>
+					<input name="plz" type="text" pattern="^[0-9]{4}$" size="4" title="4stellig">
+					<input name="ort" type="text" size="16">
+					<br />
+					<label for="email" class="margright">e-mail (*)</label><input name="email" id="email" type="email" size="24" required>
+					<br />
+				</fieldset>
+				<!--Soziodemografische Infos -->
+				<fieldset><legend>Persönliche Infos</legend>
+                    <label>Region</label>
+					<select name="Region" id="Region">
+						  <option>Bitte w&auml;hlen...</option>
+						  <option value="Jura">Jura</option>
+						  <option value="Mittelland">Mittelland</option>
+						  <option value="Alpen">Alpen</option>
+					</select>
+					<br />
+				
+					<label>Alter:</label>
+					
+					<input class="fst" name="anliegen" type="radio"  value="20"><20 Jahre<br />
+					<input type="radio" name="anliegen" value="20_50" class="right">20 bis 50 Jahre<br />
+					<input type="radio" name="anliegen" value="50" class="right">> 50 Jahre
+				</fieldset>
+				<!--Mitteilungen des Users und Newsletter Info -->
+				<fieldset><legend>Persönliche Mitteilung & Newsletter</legend>
+					<label>Bemerkungen:</label><br />
+					<textarea name="mitteilung" cols="20" rows="8"></textarea>
+					<br />
+					<input class="news" type="checkbox" name="mitteilung">Newsletter abonnieren
+				</fieldset>
+				<!-- Datenschutz Infos - muss klar ersichtlich sein -->
+				<fieldset><legend>Wichtige Infos</legend>
+                    <p>Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Bitte beachten Sie jedoch, dass die Übermittlung von elektronischen Formularen unverschlüsselt erfolgt und u.a. das nachfolgende Risiko beinhaltet: Die Daten können durch Drittpersonen abgefangen und eingesehen werden.</p>
+					<input name="senden" type="submit" value="senden" class="senden">
+					<input name="reset" type="reset" value="zurücksetzen" class="cxl">
+				</fieldset>
+			</form>
+            
+		</div>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Aufgabe 1.1</title>
+    <style>
+        h1 {
+            color: rgb(80, 143, 197);
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center">Aufgabe 1.1 / Formularelemente richtig anwenden</h1>
+        <h3 class="text-center">Formularelemente richtig anwenden</h3>
+
+        <form action="#" method="POST" class="row g-3" onsubmit="return check()">
+            <legend>Mein Formular:</legend>
+
+            <!-- ## Textfield ## -->
+            <div class="mb-3 col-12">
+                <label for="firma" class="form-label">Firma *</label>
+                <input type="text" name="firma" class="form-control" id="firma" aria-describedby="firma">
+            </div>
+
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" name="name" class="form-control" id="nname">
+            </div>
+
+            <div class="col-md-6">
+                <label for="name" class="form-label">Vorname *</label>
+                <input type="text" name="name" class="form-control" id="vname">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="adresse" class="form-label">Adresse *</label>
+                <input type="text" name="adresse" class="form-control" id="adresse">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="ort" class="form-label">Postleitzahl Ort *</label>
+                <input type="text" name="ort" class="form-control" id="ort">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="telefon" class="form-label">Telefon *</label>
+                <input type="text" name="telefon" class="form-control" id="telefon">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="mail" class="form-label">E-Mail Adresse *</label>
+                <input type="text" name="mail" class="form-control" id="mailTest">
+            </div>
+
+
+            <!-- ## Dropdown Liste ## -->
+            <div class="mb-3 col-md-6">
+                <label for="">Sortiment</label>
+                <select name="sortiment" class="form-select" aria-label="Default select example">
+                    <option value="optische_kohaerenztomographie">Optische Kohärenztomographie</option>
+                    <option value="sonografie">Sonografie</option>
+                    <option value="magnetresonanztomographie">Magnetresonanztomographie</option>
+                    <option value="computertomograhpie">Computertomograhpie</option>
+                    <option value="szintigraphie">Szintigraphie</option>
+                    <option value="positions_emissions_tomographie">Positions-Emissions-Tomographie</option>
+                </select>
+            </div>
+
+
+            <!-- ## Checkboxes ## keine ID's, name als array | label braucht keine for= -->
+            <div class="form-group col-md-6">
+                <label>Branche: </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="branche[]">
+                    <label class="form-check-label">
+                        Krankenhaus
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="branche[]">
+                    <label class="form-check-label">
+                        Forschung
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="branche[]">
+                    <label class="form-check-label">
+                        Bildung
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="branche[]">
+                    <label class="form-check-label">
+                        Endkunden
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- ## TextArea ## -->
+            <div class="form-group">
+                <label for="mittelung">Mittelung</label>
+                <textarea class="form-control" name="mittelung" id="mittelung" rows="3"
+                    pattern="[A-Za-z0-9]"></textarea>
+            </div>
+
+
+            <!-- ## TextArea ## -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="newsletter" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                    Newsletter
+                </label>
+            </div>
+            <div class="mb-3"></div>
+
+            <!-- ## Submit button  -->
+            <button type="submit" class="btn btn-primary mb-5">Submit</button>
+        </form>
+
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Landing Page Projektarbeit</title>
+
+    <!-- Copys from the GRAYSCALE theme -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top"><i class="fa-solid fa-house" style="color: #5e6268;"></i></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#loginForm">Anmelden</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Über uns</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase mb-5">AI Weather Forecast</h1>
+                    <h5 class="text-white-50 mx-auto mt-2 mb-5">
+                        Mithilfe von künstlicher Intelligenz ist es nun möglich, das Wetter bis zu 3 Monate im Voraus
+                        vorherzusagen<br />
+                        Nie wieder ins Wasser fallende Ferien oder Skitouren ohne Neuschnee<br />
+                        Nutzen Sie unsere neueste Technologie</h5>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-3">Melden Sie sich an um unser Wetterdienst
+                        zu nutzen</h2>
+                    <a class="btn btn-secondary btn-lg myButton" href="#loginForm">Anmelden</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Login -->
+
+    <div class="container" id="loginForm">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                            <div class="card-body p-5 text-center">
+                                <div class="mb-md-5 mt-md-4 pb-5">
+
+                                    <form id="formLogin" action="#" method="POST">
+                                        <fieldset>
+                                            <h2 class="fw-bold mb-2 text-uppercase">Anmeldung</h2>
+                                            <p class="text-white-50 mb-5">Benutzername und Passwort eingeben!</p>
+
+                                            <!-- USERNAME -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label" for="username">Benutzername</label>
+                                                <input type="text" name="username" id="username"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label errorMessage" for="usernameError"
+                                                    id="usernameError"></label>
+
+                                            </div>
+
+                                            <!-- PASSWORD -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label" for="password">Passwort</label>
+                                                <input type="password" name="passwd" id="passwd"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label errorMessage" for="passwdError"
+                                                    id="passwdError"></label>
+
+                                            </div>
+
+                                            <button class="btn btn-outline-light btn-lg px-5"
+                                                type="submit">Anmelden</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <div>
+                                    <p class="mb-0">Noch keinen Account? <a href="pages/signup_advanced.html"
+                                            class="text-white-50 fw-bold">Registrieren</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.validate.password.js"></script>
+    <script src="js/validate.js"></script>
+</body>
+
+</html>

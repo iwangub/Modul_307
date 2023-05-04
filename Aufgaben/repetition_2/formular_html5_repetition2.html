@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Formular">
+	<meta name="Author" content="Narcisa Grgic">
+
+	<title>Repetition Tag 3 - 307 - html5 Validierung</title>
+
+	<style>
+		#wrapper {
+			padding-left: 20px;
+			width: 70%;
+			margin: 0 auto;
+		}
+
+
+		body {
+			font-family: verdana, sans-serif;
+			font-size: 16px;
+			color: #000;
+		}
+
+		label {
+			display: inline-block;
+			width: 100px;
+			margin: 2px 0;
+		}
+
+		.margright {
+			margin-right: 5px;
+		}
+
+		.right {
+			margin-left: 105px;
+		}
+
+		textarea {
+			margin-left: 105px;
+		}
+
+		.news {
+			margin: 10px 10px 20px 0;
+		}
+
+		.senden {
+			width: 50%;
+			float: left;
+		}
+
+		.cxl {
+			width: 50%;
+			float: right;
+		}
+
+		.box1 {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 0.95em;
+		}
+
+		.fst {
+			margin-left: 0;
+		}
+
+		fieldset {
+			border: 2px dotted #bab3b3;
+			border-radius: 5px;
+			margin: 10px 0;
+
+		}
+
+		legend {
+			font-weight: bold;
+			background-color: white;
+			padding: 0 5px;
+		}
+
+		form {
+			width: 70%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h2>Repetitionsaufgabe Tag 3</h2>
+		<p>Führen Sie die Validierung mit HTML5 durch. Cursor soll im Ersten Feld blinken. Setzung der Pflichtfelder.
+			Firma, Vorname und Nachname müssen mindestens 3 Gross- und Kleinbuchstaben aufweisen, E-Mail Adresse muss
+			ein @ Zeichen enthalten. die PLZ ist kein Pflichtfeld, ist es jedoch ausgefüllt, akzeptieren Sie nur 4 und
+			5-stellige. Bei der Region sollen 3 Einträge sichtbar sein.. </p>
+		<form name="formular" method="post" action="#">
+			<!-- Generelle Einstiegsinformationen für den Kunden. Dient als Hilfe zum Ausfüllen -->
+			<div class="box1">
+				<h1>Kontakt</h1>
+				<p>Liebe Kundin, lieber Kunde! Wir freuen uns, dass Sie auf unserer Seite sind. Um ein wenig Daten zu
+					sammeln, sind wir Ihnen sehr sehr dankbar, wenn Sie unser Formular ausfüllen und retournieren. Nur
+					so lernen wir! Herzliche Grüsse, Ihr Formular Team</p>
+				<p>Wichtig: Die mit (*) gekennzeichneten Felder sind Pflichtfelder!</p>
+			</div>
+			<!--Informationen über den user -->
+			<fieldset>
+				<legend>Koordinaten</legend>
+				<label>Firma (*)</label>
+				<input name="firma" type="text" id="firma" autofocus required pattern="[A-Za-z]">
+				<br />
+				<label>Vorname</label>
+				<input name="vorname" type="text" pattern="[A-Za-z]{3}">
+				<br />
+				<label>Name (*)</label>
+				<input name="name" type="text" required pattern="[A-Za-z]">
+				<br />
+				<label>Adresse</label>
+				<input name="adresse" type="text">
+				<br />
+				<label>PLZ:</label>
+				<input name="plz" type="text">
+				<br />
+				<label>Ort:</label>
+				<input name="ort" type="text">
+				<br />
+				<label class="margright">e-mail (*)</label><input name="email" type="text" required>
+				<br />
+			</fieldset>
+			<!--Soziodemografische Infos -->
+			<fieldset>
+				<legend>Persönliche Infos</legend>
+				<label>Region (*)</label>
+				<select name="Region" id="Region">
+					<option>Bitte w&auml;hlen...</option>
+					<option value="Jura">Jura</option>
+					<option value="Mittelland">Mittelland</option>
+					<option value="Alpen">Alpen</option>
+				</select>
+				<br />
+
+				<label>Alter:</label>
+
+				<input class="fst" name="anliegen" type="radio" value="20">
+				<20 Jahre<br />
+				<input type="radio" name="anliegen" value="20_50" class="right">20 bis 50 Jahre<br />
+				<input type="radio" name="anliegen" value="50" class="right">> 50 Jahre
+			</fieldset>
+			<!--Mitteilungen des Users und Newsletter Info -->
+			<fieldset>
+				<legend>Persönliche Mitteilung & Newsletter</legend>
+				<label>Bemerkungen:</label><br />
+				<textarea name="mitteilung" cols="20" rows="8"></textarea>
+				<br />
+				<input class="news" type="checkbox" name="mitteilung">Newsletter abonnieren
+			</fieldset>
+			<!-- Datenschutz Infos - muss klar ersichtlich sein -->
+			<fieldset>
+				<legend>Wichtige Infos</legend>
+				<p>Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Bitte beachten Sie jedoch,
+					dass die Übermittlung von elektronischen Formularen unverschlüsselt erfolgt und u.a. das
+					nachfolgende Risiko beinhaltet: Die Daten können durch Drittpersonen abgefangen und eingesehen
+					werden.</p>
+				<input name="senden" type="submit" value="senden" class="senden">
+				<input name="reset" type="reset" value="zurücksetzen" class="cxl">
+			</fieldset>
+		</form>
+
+	</div>
+</body>
+
+</html>

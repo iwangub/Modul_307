@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Landing Page Projektarbeit</title>
+
+    <!-- Copys from the GRAYSCALE theme -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index.html"><i class="fa-solid fa-house" style="color: #5e6268;"></i></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#loginForm">Anmelden</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Über uns</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Login -->
+
+    <div class="container">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                            <div class="card-body mx-20 p-5 text-center">
+                                <div class="mb-md-5 mt-md-4 pb-5">
+
+                                    <form id="formSignUp" action="#" method="POST">
+                                        <h2 class="fw-bold mb-2 text-uppercase">Regisitrierung</h2>
+                                        <p class="text-white-50 mb-5">Mit Stern(*) markier sind Pflichtfelder</p>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="username">Benutzername*</label>
+                                            <input type="text" name="username" id="username"
+                                                placeholder="Benutzername..." class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="vname">Vorname*</label>
+                                            <input type="text" name="vname" id="vname"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="nname">Nachname*</label>
+                                            <input type="text" name="nname" id="nname"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="adresse">Adresse*</label>
+                                            <input type="text" name="adresse" id="adresse"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="email">Mail*</label>
+                                            <input type="text" name="email" id="email"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="adresse">PLZ*</label>
+                                            <input type="text" name="plz" id="plz"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="phone">Telefon*</label>
+                                            <input type="text" name="phone" id="phone"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="password">Passwort*</label>
+                                            <input type="password" name="password" id="password"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+                                        <!-- Passwortstärke -->
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="password-meter-label" for="password">Passwortstärke:</label>
+                                            <div class="password-meter">
+                                                <div class="password-meter-message">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Passwortstärke DONE -->
+
+                                        <div class="form-outline form-white mb-4">
+                                            <label class="form-label" for="confirmPassword">Passwort bestätigen*</label>
+                                            <input type="password" name="confirmPassword" id="confirmPassword"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+                                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                                    </form>
+
+                                </div>
+                                <div>
+                                    <p class="mb-0">Already have an account? <a href="../index.html#loginForm"
+                                            class="text-white-50 fw-bold">Login</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/jquery.validate.password.js"></script>
+    <script src="../js/validate.js"></script>
+</body>

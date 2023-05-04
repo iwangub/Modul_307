@@ -1,0 +1,252 @@
+<!doctype html>
+
+<html lang="de">
+
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Pensionsstall Vetrihof - Springkurs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="author" content="Narcisa Grgic">
+	<meta name="description" content="Pensionsstall für Pferdeprofis">
+	<style>
+		#wrapper {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		#top {
+			width: 80%;
+		}
+
+		section#one {
+			margin-top: 80px;
+		}
+
+		section#two {
+			height: auto;
+			padding-bottom: 20px;
+		}
+
+		caption {
+			font-size: 1.25rem;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+
+		table {
+			margin: 20px auto;
+			width: 60%;
+			text-align: center;
+		}
+
+		/* form styling */
+
+		form {
+			margin: 0 auto;
+			width: 40%;
+
+		}
+
+		fieldset {
+			border: 1px solid rgba(80, 50, 94, 0.4);
+			border-radius: 5px;
+			text-align: left;
+			padding: 15px;
+
+		}
+
+		legend {
+			color: #50325E;
+			font-weight: bold;
+		}
+
+		label {
+			/*display: inline-block;*/
+			float: left;
+			width: 10em;
+		}
+
+		input {
+			margin-right: 5px;
+		}
+
+		.mrg {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="top">
+			<div id="head"><a class="link" href="#oben">Pensionsstall Vetrihof</a></div>
+
+			<nav>
+				<ul>
+					<li><a href="../index.html#home" class="smoothScroll">Home</a></li>
+					<li><a href="../index.html#box" class="smoothScroll">Pferdeboxen</a></li>
+					<li><a href="../index.html#gal" class="smoothScroll">Galerie</a></li>
+					<li><a href="../index.html#kurs" class="smoothScroll">Kurse</a></li>
+				</ul>
+			</nav>
+
+		</div><!-- end top-->
+
+
+		<div id="content">
+			<section id="one">
+				<a class="anchor" id="home"></a>
+				<h1>Springstunde mit Markus Fuchs</h1>
+				<p>Der Profi Markus Fuchs zeigt Ihnen am 15. Juli 2017 Profitricks beim Springen.
+					Nehmen Sie mit Ihrem eigenen Pferd teil, oder reservieren Sie rechtzeitig eines unserer
+					springfreudigen Schulpferde. Miete Schulpferd kostet CHF 30.-. Der beste Einstieg in den
+					Springsport. Voraussetzung: sattelfest in allen Gangarten & Reitbrevet. Wir gehen nicht höher als
+					90cm. Stollen werden nicht benötigt. </p>
+				<table>
+					<caption>Wichtige Informationen</caption>
+					<tr>
+						<td>Datum:</td>
+						<td>15.Juli 2019</td>
+					</tr>
+					<tr>
+						<td>Wo:</td>
+						<td>Vetrihof Springplatz</td>
+					</tr>
+					<tr>
+						<td>Wer:</td>
+						<td>Alle mit Grundkenntnissen</td>
+					</tr>
+					<tr>
+						<td>Zeit:</td>
+						<td>14:00 bis 15:30h</td>
+					</tr>
+					<tr>
+						<td>Preis:</td>
+						<td>CHF 100.- (Ohne Schulpferd)</td>
+					</tr>
+				</table>
+			</section><!-- end section 1-->
+
+			<section id="two">
+				<a class="anchor" id="box"></a>
+
+				<h1>Anmeldeformular</h1>
+
+				<form name="booking" id="#booking" action="#" method="post">
+
+					<!-- Koordinaten -->
+					<fieldset>
+						<legend>Koordinaten:</legend>
+						<p>
+							<label for="vorname">Vorname (Pflichtfeld):</label>
+							<input type="text" name="vorname" id="vorname" required autofocus
+								pattern="^[A-Za-zäöü -]+$" />
+						<div id="error_vname" class="errmsg"></div>
+						<div id="valid_vname" class="valmsg"></div>
+						</p>
+						<p>
+							<label for="nachname">Nachname (Pflichtfeld):</label>
+							<input type="text" name="nachname" id="nachname" required pattern="^[A-Za-zäöü -']+$" />
+						<div id="error_nname" class="errmsg"></div>
+						<div id="valid_nname" class="valmsg"></div>
+						</p>
+						<p>
+							<label for="strasse">Strasse & Nr.:</label>
+							<input type="text" name="strasse" id="strasse" />
+						</p>
+						<p>
+							<label for="plz">PLZ:</label>
+							<input type="text" name="plz" id="plz" maxlength="4" pattern="[0-9]+" />
+						<div id="error_plz" class="errmsg"></div>
+						<div id="valid_plz" class="valmsg"></div>
+						</p>
+						<p>
+							<label for="ort">Ort:</label>
+							<input type="text" name="ort" id="ort" />
+						</p>
+						<p>
+							<label for="email">E-Mail (Pflichtfeld):</label>
+							<input type="email" name="email" id="email" size="24" required
+								pattern="[A-Za-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}" />
+						<div id="error_email" class="errmsg"></div>
+						<div id="valid_email" class="valmsg"></div>
+						</p>
+						<p>
+							<label>Mitglied beim RVB:</label>
+							<input name="member" type="radio" value="yes" />JA
+							<input name="member" type="radio" value="no" />Nein<br />
+						</p>
+					</fieldset>
+
+					<!-- Kursanmeldung -->
+					<fieldset>
+						<legend>Kursanmeldung:</legend>
+						<p>
+							<label>Kursart:</label>
+							<select name="kurs" id="kurs">
+								<option>Bitte Kurs wählen</option>
+								<option value="jump">Springkurs mit Markus Fuchs</option>
+								<option value="dressage">Dressur leicht gemacht</option>
+								<option value="brevet">Brevetkurs</option>
+							</select>
+						</p>
+						<p>
+							<label>Anzahl Personen:</label>
+							<input type="text" name="anz" id="anz" size="10" />
+						</p>
+					</fieldset>
+
+					<!-- Pferdemiete -->
+					<fieldset>
+						<legend>Pferd</legend>
+						<p>Kosten Pferdemiete CHF 30.- pro Kurs</p>
+						<label>Pferdemiete</label>
+						<input name="horse" type="radio" value="own" />Eigenes Pferd
+						<input name="horse" type="radio" value="rent" />Schulpferd mieten<br />
+					</fieldset>
+					<fieldset>
+						<legend>Bemerkungen</legend>
+						<textarea name="message" cols="30"></textarea>
+					</fieldset>
+
+					<!-- Wichtige Infos -->
+					<fieldset>
+						<legend>Wichtige Infos</legend>
+						<p class="mrg">Ihre Daten werden vertraulich behandelt. Die Anmeldung ist verbindlich. Sollten
+							Sie
+							nicht teilnehmen können, melden Sie sich bitte mindestens 24h im Voraus ab. Ansonsten werden
+							die
+							Kosten verrechnet. Der Kurs findet nur bei schönem Wetter statt und bei mindestens 3
+							Teilnehmern. 1 Woche vor Kursbeginn erhalten Sie weitere Informationen.</p>
+						<p class="mrg"><input name="agb" id="agb" type="checkbox" required> Ich habe die AGB gelesen</p>
+						<div id="error_box" class="errmsg"></div>
+						<div id="valid_box" class="valmsg"></div>
+
+						<input name="send" type="submit" value="Senden" />
+						<input name="reset" type="reset" value="Löschen" />
+					</fieldset>
+				</form>
+
+
+			</section><!-- end section 2-->
+
+
+
+		</div><!-- end content-->
+
+		<footer>
+			<p>Danke für Ihren Besuch! Wir freuen uns auf Sie! &copy; Vetrihof</p>
+		</footer>
+
+	</div><!--end wrapper-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="../js/smoothscroll.js"></script>
+	<script src="../js/myValidation.js"></script>
+
+</body>
+
+</html>

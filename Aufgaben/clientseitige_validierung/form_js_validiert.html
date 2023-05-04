@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>Anmelde Formular für Neukunden TOPOMEDICS AG</title>
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="css/bootstrap.min.css"> 
+	   <style>
+		form{ width: 50%; margin: 0 auto;}
+		
+	   </style>
+        <script>
+            function check(){
+            	
+                if (document.formular.name.value == "") {
+                    alert('Bitte geben Sie einen Namen ein');
+                    document.formular.name.focus();
+                    return false;
+                }
+                
+                if (document.formular.vorname.value == "") {
+                    alert('Bitte geben Sie einen Vornamen ein');
+                    document.formular.vorname.focus();
+                    return false;
+                }
+                
+                if (document.formular.adresse.value == "") {
+                    alert('Bitte geben Sie eine Adresse ein');
+                    document.formular.adresse.focus();
+                    return false;
+                }
+                
+                if (document.formular.plz.value == "") {
+                    alert('Bitte geben Sie eine 4-stellige Postleitzahl ein');
+                    document.formular.plz.focus();
+                    return false;
+                }
+
+                if (document.formular.ort.value == "") {
+                    alert('Bitte geben Sie eine Adresse ein');
+                    document.formular.ort.focus();
+                    return false;
+                }
+                
+                if (document.formular.email.value == "") {
+                    alert("Bitte Ihre E-Mail-Adresse eingeben!");
+                    document.formular.email.focus();
+                    return false;
+                } 
+                
+                if (document.formular.email.value.indexOf("@") == -1) {
+                    alert("Das ist keine E-Mail-Adresse!");
+                    document.formular.email.focus();
+                    return false;
+                  }
+            }
+        
+        </script>
+	   
+	</head>
+	<body>
+		<form novalidate name="formular" action="javascript: alert('Validierung gaht dänk nonig');" id="form" method="post" onSubmit="return check()">
+			<h2>Neukunden TOPOMEDICS AG</h2>
+			<fieldset id="kontakt">
+				<legend>Persönliche Daten</legend>
+				<div class="form-group"> 
+				  <label for="name">Name*</label>  
+				  <input name="name" placeholder="Name" class="form-control" id="name" type="text" autofocus>
+				</div>
+				<div class="form-group">
+				  <label for="vorname">Vorname*</label>  
+				  <input name="vorname" placeholder="Vorname" class="form-control" id="vorname" type=" text">
+				 </div>
+				<div class="form-group">
+				  <label for="adresse">Adresse*</label>  
+				  <input name="adresse" placeholder="Adresse" class="form-control" id="adresse" type="text">
+				</div>
+
+				<div class="form-group">
+				  <label for="plz">PLZ*</label>  
+				  <input name="plz" placeholder="Postleitzahl 4-stellig" class="form-control" id="plz" type="text">
+				</div>
+
+				<div class="form-group">
+				  <label for="ort">Ort*</label>  
+				  <input name="ort" placeholder="Ort" class="form-control" id="ort" type="text">
+				</div>
+				<div class="form-group">
+				  <label for="email">E-Mail*</label>  
+				  <input name="email" placeholder="test@test.ch" class="form-control" id="email" type="text">
+				 </div>
+				<div class="form-group">
+				  <label for="telefon">Telefon: </label>  
+				   <input name="telefon" placeholder="044 777 77 77" class="form-control" id="telefon" type="text">
+				 </div>
+				</div>
+			</fieldset>
+			<fieldset id="sortiment">
+				<legend>Sortiment:</legend>
+				<div class="form-group">
+				  <label>Sortiment: </label>
+				  <select id="sortiment" name="sortiment" class="form-control" multiple="multiple">
+					  <option value="ok">Optische Kohärenztomographie</option>
+					  <option value="so">Sonografie</option>
+					  <option value="ma">Magnetresonanztomographie</option>
+					  <option value="co">Computertomographie</option>
+					  <option value="sz">Szintigraphie</option>
+					  <option value="pe">Positions-Emissions-Tomographie</option>
+					</select>
+				 
+				</div>
+			</fieldset>
+			<fieldset id="branche">
+				<legend>Branche:</legend>
+				<div class="form-group">
+					<label><input class="radio-inline" name="branche" value="krankenhaus" checked="checked" type="radio">Krankenhaus</label>
+					 <label><input class="radio-inline" name="branche" value="Forschung" type="radio">Forschung</label>
+					<label><input class="radio-inline" name="branche" value="Bildung" type="radio">Bildung</label>
+					<label><input class="radio-inline" name="branche" value="Endkunden" type="radio">Endkunden</label>
+				</div>
+			</fieldset>
+			<fieldset id="infos">
+				<legend>Infos:</legend>
+				<div class="form-group">
+				  <label for="message">Nachricht:</label>
+					<textarea class="form-control" id="message" name="message"></textarea>
+				</div>
+				<div class="form-group">
+				  <label for="newsletter">Newsletter: </label>
+					<label class="checkbox-inline" for="newsletter-0">
+					<input name="newsletter" id="newsletter" value="" type="checkbox">
+					</label>
+				</div>
+			</fieldset>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Senden</button>
+			 </div>
+		</form>
+
+	</body>
+</html>

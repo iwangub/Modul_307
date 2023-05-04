@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Registrierungsformular Vetrihof</title>
+        <meta charset="utf-8">
+</head>
+    <body>
+        <h1>Mitgliederanmeldung Vetrihof</h1>
+        <p>Bitte füllen Sie die nachfolgenden Eingabefelder aus: </p>
+        <p>Felder mit (*) sind Pflichtfelder! </p>
+        <form id="userform" action="#" method="post">
+            <fieldset id="user"><!--Informationen über das Mitglied-->
+                <legend>Koordinaten:</legend>
+                <div class="form-group">
+                    <label for="vname">Vorname(*):</label>
+                    <input class="form-control" type="text" name="vname" id="vname">
+                </div>
+                <div class="form-group">
+                    <label for="nname">Nachname (*):</label>
+                    <input class="form-control" type="text" name="nname" id="nname" >
+                </div>
+                <div class="form-group">
+                    <label for="plz">PLZ (*):</label>
+                    <input class="form-control" type="text" name="plz" id="plz">
+                </div>
+                <div class="form-group">
+                    <label for="ort">Wohnort (*):</label>
+                    <input class="form-control" type="text" name="ort" id="ort">
+                </div>
+                <div class="form-group">
+                    <label for="bdate">Geburtsdatum (*):</label>
+                    <input class="form-control" name="bdate" type="text" id="bdate">
+                </div>
+                <div class="form-group">
+                    <label for="email">e-mail (*):</label>
+                    <input class="form-control" name="email" type="text" size="20" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username wählen (*): </label>
+                    <input class="form-control" type="text" name="username" id="username" required placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort wählen (*): </label>
+                    <input class="form-control" type="password" name="password" id="password" required placeholder="Passwort">
+                </div>
+                <div class="form-group">
+                    <label class="password-meter-label" for="password">Passwortstärke:</label>
+                        <div class="password-meter">
+                            <div class="password-meter-message">
+                            &nbsp;
+                            </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Passwort wiederholen (*): </label>
+                    <input class="form-control" type="password" name="confirm_password" id="confirm_password" required placeholder="Passwort wiederholen">
+                </div>
+            </fieldset>
+            <fieldset><!--Angaben über Mitglieds-->
+                <legend>Reitart:</legend>
+                <div class="form-group">
+                    <label for="reitweise">Reitweise:</label>
+                        <select class="form-control" id="reitweise" name="reitweise" multiple>
+                          <option value="englisch">Englisch</option>
+                          <option value="western">Western</option>
+                          <option value="dressur">Dressur</option>
+                          <option value="springen">Springen</option>
+                        </select>
+                </div>
+             </fieldset>
+             <fieldset>
+                <legend>Über Sie:</legend>
+                <div class="form-group">
+                    <label>Altersgruppe:</label>
+                        <input class="radio-inline" type="radio" name="alter" value="20-40">20-40
+                        <input class="radio-inline" type="radio" name="alter" value="41-60">41-60
+                        <input class="radio-inline" type="radio" name="alter" value="61-80">>60
+                </div>
+                <div class="form-group">
+                    <label>Eigenes Pferd?</label>
+                        <input class="radio-inline" type="radio" name="horse" value="ja">JA
+                        <input class="radio-inline" type="radio" name="horse" value="nein">NEIN
+                </div>
+                <div class="form-group">
+                  <label for="message">Nachricht:</label>
+                    <textarea class="form-control" id="message" name="message"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-inline" for="newsletter">Newsletter: </label>
+                    <input name="newsletter" id="newsletter" value="" type="checkbox">
+                    </label>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Senden</button>
+             </div>
+        </form>
+    </body>
+</html>

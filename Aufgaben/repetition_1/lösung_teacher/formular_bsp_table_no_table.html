@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formular table yes no</title>
+<style>
+	body { 
+		background-color: #ccc;
+		color: #555;
+		font-size: 1em;
+		font-family: Geneva, Arial, sans-serif;
+		padding:0;
+		margin: 50px;
+	}
+	
+	#wrapper {
+		width: 80%;
+		margin: 0 auto;	
+	}
+	
+	
+	fieldset  { 
+		width: 80%; 
+		border: solid 1px #BFBFB2;
+		padding:30px;
+		background-color: #ddd;
+	}
+	legend  { 
+		padding: 5px 20px; 
+		border: solid 1px #BFBFB2;
+		background-color: #fff; 
+		color:#bbb;
+		font-weight:bold;
+		letter-spacing:2px;
+		margin:0 0 10px 0;
+	}
+	label  { 
+		min-width: 100px; 
+		float: left;
+		margin: 3px;
+	}
+
+	.group { margin:0 0 9px 0;}
+	.group label {
+		float:none;
+		display:inline-block;
+		width:auto;
+		margin:0 12px 0 4px;
+		padding:2px 4px;
+	}
+
+	input, textarea { 
+		width:350px;
+		border: 1px solid #777;
+		font-size: 1em; 
+		padding: 5px;
+		margin:0 0 10px 0;
+		background-color: #ddd;
+	}
+  
+	input.default {
+		width:auto;
+		background-color: #ccc;
+	}
+	  
+	input:focus, input:hover, textarea:focus, textarea:hover {
+    	background-color: #f0f0f0;
+    	border-color: #000; 
+  	}
+    input[type=radio]:focus + label {
+      background-color: #f0f0f0; 
+    }
+  
+  .cllft { clear:left; }
+  .service { margin: 16px 0 0 107px; }
+
+  </style>
+
+</head>
+
+<body>
+	<div id="wrapper">
+        <header><h1>Ein Formularbeispiel</h1></header>
+        <section>
+        <p>Ein kleines Formularbeispiel ohne Tabelle</p>
+          <form id="FormName" action="#" method="get" name="FormName">
+            <fieldset>
+              <legend>FEEDBACK FORMULAR</legend>
+              <div class="group">
+                <input type="radio" name="sex" id="sex_f" value="f" class="default">
+                <label for="sex_f">Frau</label>
+                <input type="radio" name="sex" id="sex_m" value="m" class="default">
+                <label for="sex_m">Herr</label>
+            </div>
+            
+              <label for="pn">Vorname</label>
+              <input type="text" id="pn" name="vorname" size="24" />
+              <br class="cllft" />
+              
+              <label for="nachname">Nachname</label>
+              <input type="text" id="nachname" name="nachname" size="24" />
+              <br class="cllft" />
+              
+              <label for="email">E-Mail</label>
+              <input type="text" name="email" id="email" size="24" />
+              <br class="cllft" />
+              
+              <label for="message">Mitteilung</label> 
+              <textarea id="message" name="message" rows="4" cols="40" ></textarea>
+              
+              <div class="service cllft">
+                <input class="default" type="submit" name="feedback" value="senden" />
+                <input class="default" type="reset" value="löschen"/>
+              </div>
+            </fieldset>
+          </form>
+          <hr />
+          <p>Ein kleines Formularbeispiel mit Tabelle</p>
+          <form id="FormName" action="#" method="get" name="FormName">
+            <fieldset>
+              <legend>FEEDBACK FORMULAR</legend>
+              		<div class="group">
+                        <input type="radio" name="sex" id="sex_f" value="f" class="default">
+                        <label for="sex_f">Frau</label>
+                        <input type="radio" name="sex" id="sex_m" value="m" class="default">
+                        <label for="sex_m">Herr</label>
+                    </div>
+                <table>
+                	<tr>
+                      <td><label for="pn">Vorname</label></td>
+                      <td><input type="text" id="pn" name="vorname" size="24" /></td>
+                      <br class="cllft" />
+                    </tr>
+                    <tr> 
+                      <td><label for="nachname">Nachname</label></td>
+                      <td><input type="text" id="nachname" name="nachname" size="24" /></td>
+                      <br class="cllft" />
+                     </tr>
+                     <tr>
+                      <td><label for="email">E-Mail</label></td>
+                      <td><input type="text" name="email" id="email" size="24" /></td>
+                      <br class="cllft" />
+                     </tr>
+                     <tr>
+                      <td><label for="message">Mitteilung</label></td>
+                      <td><textarea id="message" name="message" rows="4" cols="40"></textarea></td>
+                     </tr>
+                  </table>
+                  
+                  <div class="service cllft">
+                    <input class="default" type="submit" name="feedback" value="senden" />
+                    <input class="default" type="reset" value="löschen"/>
+                  </div>
+            </fieldset>
+          </form>
+          </section>
+       </div>
+    </body>
+</html>

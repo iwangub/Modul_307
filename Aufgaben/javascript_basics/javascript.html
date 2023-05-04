@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Beispiele Javascript</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1>Javascript Beispiele</h1>
+		<h1>Javascript Beispiele</h1>
+		<!-- Aufgaben 
+          	1. Erstellen Sie ein js script mit dem Namen js.js - Binden Sie das Skript am Ende in Ihr HTML ein 
+          	2. Damit uns die HTML5 Validierung nicht dazwischenfunkt, schalten wir diese aus -> notieren Sie hier wie "novalidate"
+          	3. Beim Absenden des Formulars möchten wir gerne die Funktion check() abrufen, welche wir im js File erstellen. Ergänzen Sie Ihr Formular entsprechend, damit dies passiert. Tipp: Ergänzung im form tag
+          	4. function check() - wenn das Inputfeld mit dem Namen name und vorname leer ist, soll ein alert erscheinen und dies anzeigen. 
+          	5. Erstellen Sie 3 buttons mit folgenden funktionen - der erste button ist vorbereitet:
+          		color : die ID pink soll pink werden
+          		blue: das erste h1 soll blau werden
+          		cxl: Alles soll wieder default erscheinen
+            6. nu n möchten Sie alle p's beim Klicken auf den Button roter Hintergrund rot färben. Schreiben Sie die Funktion red. Ergänzen Sie mit einem reset Button, der dies wieder Rückgängig macht. 
+
+          -->
+		<script>
+		// Message wird ausgegeben - alert = function wie alles, das klammern hat
+			//alert('welcome zum js basics');
+			console.log('hello hello'); //message in console f12 - console
+		</script>
+		<form novalidate name="form1" action="#" id="form" method="post" onsubmit="return check()">
+         <h2 id="pink">Neukunden TOPOMEDICS AG</h2>
+         <fieldset id="kontakt"><!-- koordinaten -->
+            <legend>Persönliche Daten:</legend>
+            <label for="name" required>Name: *  </label>
+            <input type="text" name="name" id="name" required>
+            <label for="vorname" required>Vorname: *  </label>
+            <input type="text" name="vorname" id="vorname" required>
+          </fieldset>
+          <input type="submit" value="senden" />
+          </form>
+
+          <button onclick="color()" >Klick mich um die Überschrift h2 rosa zu färben</button><br />
+          <button onclick="blue()" >Und nun mich, um den ersten H1 blau zu färben</button><br />
+          <button onclick="cxl()" >Alles wieder löschen/zurücksetzen</button>
+          <h3>Verändern von mehreren zusammen</h3>
+          <p>Ich bin ein p</p>
+
+		  <p>Ich auch</p>
+
+		  <p>Ich auch - Klicke auf den Button, um den Hintergrund aller p elemente in diesem Dokument rot zu färben. </p>
+
+			<button onclick="red()">roter Hintergrund</button>
+			<button onclick="nored()">reset</button>
+
+      
+		<script src="js.js"></script>
+    <script>
+        document.write('Das ist das Ende des Dokuments');
+      </script>
+	</body>
+
+</html>

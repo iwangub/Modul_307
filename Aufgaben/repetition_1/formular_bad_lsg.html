@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Formular">
+	<meta name="keywords" content="Formular">
+	<meta name="Author" content="Narcisa Grgic">
+
+	<title>Formular - Erste Schritte</title>
+
+	<style type="text/css">
+		#wrapper {
+			padding-left: 20px;
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		body {
+			font-family: verdana, sans-serif;
+			font-size: 16px;
+			color: #000;
+		}
+
+		.box1 {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 0.95em;
+		}
+
+		label {
+			display: inline-block;
+			width: 100px;
+			margin: 2px 0;
+		}
+
+		.margright {
+			margin-right: 5px;
+		}
+
+		.right {
+			margin-left: 105px;
+		}
+
+		.rightSpecial {
+			margin-left: -1px;
+		}
+
+		textarea {
+			margin-left: 105px;
+		}
+
+		.news {
+			margin: 10px 10px 20px 0;
+		}
+
+		fieldset {
+			border: 2px dotted #bab3b3;
+			border-radius: 5px;
+			margin: 10px 0;
+		}
+
+		legend {
+			font-weight: bold;
+			background-color: white;
+			padding: 0 5px;
+		}
+
+		.senden {
+			width: 50%;
+			float: left;
+		}
+
+		.cxl {
+			width: 50%;
+			float: right;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="box1">
+			<form name="formular" method="post"
+				action="javascript:alert('Bitte beachten Sie: Die Datenweitergabe ist noch nicht implementiert!')">
+				<h1>Kontakt</h1>
+				<p>Liebe Kundin, lieber Kunde! Wir freuen uns, dass Sie auf unserer Seite sind. Herzliche Grüsse, Ihr
+					Formular Team</p>
+		</div>
+		<p>Wichtig: Die mit * gekennzeichneten Felder sind Pflichtfelder!</p>
+		<!-- Informationen über den User -->
+		<fieldset>
+			<legend>Koordinaten</legend>
+			<label>Firma *</label>
+			<input name="firma" type="text" id="firma" size="20" autofocus>
+			<br />
+			<label>Vorname</label>
+			<input name="vorname" type="text" size="20">
+			<br />
+			<label>Name *</label>
+			<input name="name" type="text" size="20">
+			<br />
+			<label>Adresse</label>
+			<input name="adresse" type="text" size="20">
+			<br />
+			<label>PLZ / Ort</label>
+			<input name="plz" type="text" size="4">
+			<input name="ort" type="text" size="20">
+			<br />
+			<label class="margright">e-mail</label><input name="email" type="text" size="20">
+			<br />
+		</fieldset>
+
+
+		<!-- Persönliche Infos -->
+		<fieldset>
+			<legend>Persönliche Infos</legend>
+			<label>Region</label>
+			<select name="Region" id="Region">
+				<option>Bitte w&auml;hlen...</option>
+				<option value="Jura">Jura</option>
+				<option value="Mittelland">Mittelland</option>
+				<option value="Alpen">Alpen</option>
+			</select>
+			<br />
+
+			<label>Alter:</label>
+			<input name="anliegen" type="radio" class="rightSpecial" value="20">>20 Jahre<br />
+			<input type="radio" name="anliegen" value="20_50" class="right">20 bis 50 Jahre<br />
+			<input type="radio" name="anliegen" value="50" class="right">> 50 Jahre<br />
+		</fieldset>
+		<!--TEXTAREA-->
+		<fieldset>
+			<legend>Persönliche Mitteilung und Newsletter</legend>
+			<label>Mitteilung</label><br />
+			<textarea name="mitteilung" cols="20" rows="8"></textarea>
+
+			<br />
+			<input class="news" type="checkbox" name="mitteilung">Newsletter abonnieren
+			<br />
+		</fieldset>
+
+		<fieldset>
+			<legend>Wichtige Infos</legend>
+			<p>Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Bitte beachten Sie
+				jedoch,
+				dass die Übermittlung von elektronischen Formularen unverschlüsselt erfolgt und u.a. das
+				nachfolgende
+				Risiko beinhaltet: Die Daten können durch Drittpersonen abgefangen und eingesehen werden.</p>
+			<input name="senden" type="submit" value="Absenden" class="senden">
+			<input name="reset" type="reset" value="Zurücksetzen" class="cxl">
+		</fieldset>
+		</form>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald&display=swap');
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family: 'Oswald', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+
+}
+
+
+.ownCss {
+    color: white;
+}
+
+.myForm {
+    background-color: rgba(255, 255, 255, 0.473);
+    padding: 50px;
+}

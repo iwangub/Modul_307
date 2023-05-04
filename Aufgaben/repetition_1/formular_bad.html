@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Formular">
+	<meta name="keywords" content="Formular">
+	<meta name="Author" content="Narcisa Grgic">
+
+	<title>Formular - Erste Schritte</title>
+
+	<style type="text/css">
+		#wrapper {
+			margin: 0 auto;
+		}
+
+		body {
+			font-family: verdana, sans-serif;
+			color: #8D8C8C;
+		}
+
+		label {
+			display: inline-block;
+			width: 100px;
+			margin: 2px 0;
+		}
+
+		.margright {
+			margin-right: 5px;
+		}
+
+		.right {
+			margin-left: 105px;
+		}
+
+		textarea {
+			margin-left: 105px;
+		}
+
+		.news {
+			margin: 10px 10px 20px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<form name="formular" method="post"
+			action="javascript:alert('Bitte beachten Sie: Die Datenweitergabe ist noch nicht implementiert!')">
+			<h1>Kontakt</h1>
+			<p>Liebe Kundin, lieber Kunde! Wir freuen uns, dass Sie auf unserer Seite sind. Um ein wenig Daten zu
+				sammeln, sind wir Ihnen sehr sehr dankbar, wenn Sie unser Formular ausfüllen und retournieren. Nur so
+				lernen wir! Herzliche Grüsse, Ihr Formular Team</p>
+			<p>Wichtig: Die mit <img src="ball.gif" width="30" /> gekennzeichneten Felder sind Pflichtfelder!</p>
+
+			<label><img src="ball.gif" width="30" />Firma</label>
+			<input name="firma" type="text" id="firma" size="20">
+			<br />
+			<label>Vorname</label>
+			<input name="vorname" type="text" size="20">
+			<br />
+			<label><img src="ball.gif" width="30" />Name</label>
+			<input name="name" type="text" size="20">
+			<br />
+			<label>Adresse</label>
+			<input name="adresse" type="text" size="20">
+			<br />
+			<label>PLZ / Ort</label>
+			<input name="plz" type="text" size="4">
+			<input name="ort" type="text" size="20">
+			<br />
+			<label class="margright">e-mail</label><input name="email" type="text" size="20">
+			<br />
+			<label>Region</label>
+			<select name="Region" id="Region">
+				<option>Bitte w&auml;hlen...</option>
+				<option value="Jura">Jura</option>
+				<option value="Mittelland">Mittelland</option>
+				<option value="Alpen">Alpen</option>
+			</select>
+			<br />
+
+			<label>Alter:</label>
+			<br />
+			<input name="anliegen" type="radio" class="right" value="20">>20 Jahre<br />
+			<input type="radio" name="anliegen" value="20_50" class="right">20 bis 50 Jahre<br />
+			<input type="radio" name="anliegen" value="50" class="right">> 50 Jahre<br />
+			<label>Mitteilung</label><br />
+			<textarea name="mitteilung" cols="20" rows="8"></textarea>
+			<br />
+			<input class="news" type="checkbox" name="mitteilung">Newsletter abonnieren
+			<br />
+			<p>Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Bitte beachten Sie jedoch,
+				dass die Übermittlung von elektronischen Formularen unverschlüsselt erfolgt und u.a. das nachfolgende
+				Risiko beinhaltet: Die Daten können durch Drittpersonen abgefangen und eingesehen werden.</p>
+			<input name="senden" type="submit" value="Ab die Post" class="senden">
+			<input name="reset" type="reset" value="cxl">
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Beispiele Javascript</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <h1>Javascript Beispiele</h1>
+  <script>
+    // Message wird ausgegeben - alert = function wie alles, das klammern hat
+    /* dfsdfsdf
+    dfdfd
+    */
+    // alert('welcome zum js basics');
+    console.log('hello hello'); // message wird in console angezeigt f12
+  </script>
+  <form onsubmit="return check()" name="form1" action="#" id="form" method="post">
+    <h2 id="pink">Neukunden TOPOMEDICS AG</h2>
+    <fieldset id="kontakt"><!-- koordinaten -->
+      <legend>Persönliche Daten:</legend>
+      <label for="name" required>Name: * </label>
+      <input type="text" name="name" id="name" <!-- required-->>
+      <label for="vorname" <!-- required-->>Vorname: * </label>
+      <input type="text" name="vorname" id="vorname">
+    </fieldset>
+    <input type="submit" value="senden" />
+  </form>
+
+  <!-- Aufgaben 
+          	1. Erstellen Sie ein js script mit dem Namen js.js - Binden Sie das Skript am Ende in Ihr HTML ein 
+            DONE ###
+
+          	2. Damit uns die HTML5 Validierung nicht dazwischenfunkt, schalten wir diese aus -> notieren Sie hier wie
+            DONE ##
+          	3. Beim Absenden des Formulars möchten wir gerne die Funktion check() abrufen, welche wir im js File erstellen. 
+            Ergänzen Sie Ihr Formular entsprechend, damit dies passiert. Tipp: Ergänzung im form tag
+          	DONE ##
+            
+            4. function check() - wenn das Inputfeld mit dem Namen name und vorname leer ist, soll ein alert erscheinen und dies anzeigen. 
+          	DONE ##
+            
+            5. Erstellen Sie 3 buttons mit folgenden funktionen - der erste button ist vorbereitet:
+          		color : die ID pink soll pink werden
+          		blue: das erste h1 soll blau werden
+          		cxl: Alles soll wieder default erscheinen
+            DONE ##
+
+            6. nun möchten Sie alle p's beim Klicken auf den Button roter Hintergrund rot färben. 
+            Schreiben Sie die Funktion red. 
+            Ergänzen Sie mit einem reset Button, der dies wieder Rückgängig macht. 
+            DONE ##
+          -->
+  <button onclick="color('pink')">Klick mich um h2 rosa zu färben</button>
+  <button onclick="color('blue')">Klick mich um h2 blau zu färben</button>
+  <button onclick="color('red')">Klick mich um h2 rot zu färben</button>
+  <button onclick="color('black')">clx</button>
+
+  <h3>Verändern von mehreren zusammen</h3>
+  <p>Ich bin ein p</p>
+
+  <p>Ich auch</p>
+
+  <p>Ich auch - Klicke auf den Button, um den Hintergrund aller p elemente in diesem Dokument rot zu färben. </p>
+  <button onclick="red()">roter Hintergrund</button>
+  <button onclick="changeP()">roter Hintergrund</button>
+  <button onclick="nored()">P tags reseten</button>
+
+
+  <script src="js.js"></script>
+</body>
+
+</html>
