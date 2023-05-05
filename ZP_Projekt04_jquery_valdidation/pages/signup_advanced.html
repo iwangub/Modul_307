@@ -53,7 +53,7 @@
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-8">
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
                             <div class="card-body mx-20 p-5 text-center">
                                 <div class="mb-md-5 mt-md-4 pb-5">
@@ -66,62 +66,91 @@
 
                                         <fieldset>
                                             <legend>Koordinaten</legend>
+                                            <!-- TEXTFIELD username -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="username">Benutzername*</label>
                                                 <input type="text" name="username" id="username"
                                                     placeholder="Benutzername..."
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- TEXTFIELD username //DONE//-->
 
 
+                                            <!-- DROPDOWN gender -->
+                                            <div class="form-outline form-white mb-4 col-xl-2 mx-auto">
+                                                <label for="example-select" class="form-label">Anrede</label>
+                                                <select class="form-select form-select-sm"
+                                                    aria-label=".form-select-sm example">
+                                                    <option value="male">Herr</option>
+                                                    <option value="female">Frau</option>
+                                                </select>
+                                            </div>
+                                            <!-- DROPDOWN gender //DONE//-->
+
+                                            <!-- Textfield Name -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="vname">Vorname*</label>
                                                 <input type="text" name="vname" id="vname"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield Name //DONE//-->
 
 
+                                            <!-- Textfield Lastame -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="nname">Nachname*</label>
                                                 <input type="text" name="nname" id="nname"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield Lastame //DONE//-->
 
 
+                                            <!-- Textfield Address -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="adresse">Adresse*</label>
                                                 <input type="text" name="adresse" id="adresse"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield Address //DONE//-->
 
 
+                                            <!-- Textfield Mail -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="email">Mail*</label>
                                                 <input type="text" name="email" id="email"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield Mail //DONE//-->
 
 
+                                            <!-- Textfield PLZ -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="adresse">PLZ*</label>
                                                 <input type="text" name="plz" id="plz"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield PLZ //DONE//-->
 
 
+                                            <!-- Textfield Phone -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="phone">Telefon*</label>
                                                 <input type="text" name="phone" id="phone"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Textfield Phone //DONE//-->
 
+
+                                            <!-- Password-type Password -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="password">Passwort*</label>
                                                 <input type="password" name="password" id="password"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Password-type Password //DONE// -->
 
-                                            <!-- Passwortstärke -->
+
+                                            <!-- Passwordstrength -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="password-meter-label"
                                                     for="password">Passwortstärke:</label>
@@ -131,14 +160,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Passwortstärke DONE -->
+                                            <!-- Passwordstrength //DONE// -->
 
+
+                                            <!-- Password-type Password -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="confirmPassword">Passwort
                                                     bestätigen*</label>
                                                 <input type="password" name="confirmPassword" id="confirmPassword"
                                                     class="form-control form-control-lg" />
                                             </div>
+                                            <!-- Password-type Password //DONE// -->
+
 
 
                                             <!-- TESTING AREA -->
@@ -159,13 +192,14 @@
                                         </fieldset>
                                         <!-- TESTING AREA ## DONE ##-->
 
-                                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                                        <button class="btn btn-outline-light btn-lg px-5"
+                                            type="submit">Registrieren</button>
                                     </form>
 
                                 </div>
                                 <div>
-                                    <p class="mb-0">Already have an account? <a href="../index.html#loginForm"
-                                            class="text-white-50 fw-bold">Login</a>
+                                    <p class="mb-0">Account bereits vorhanden? <a href="../index.html#loginForm"
+                                            class="text-white-50 fw-bold">Anmelden</a>
                                     </p>
                                 </div>
 
