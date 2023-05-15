@@ -62,10 +62,11 @@
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <form id="formSignUp" action="success_signup.html" method="POST">
                                 <h2 class="fw-bold mb-2 text-uppercase">Registrierung</h2>
-                                <p class="text-white-50 mb-5">Mit Stern(*) markiert sind Pflichtfelder</p>
+                                <p class="text-white-50 mb-5 custom-fontsize">Mit Stern(*) markiert sind Pflichtfelder
+                                </p>
 
-                                <fieldset>
-                                    <legend class="text-white-50">Koordinaten</legend>
+                                <fieldset class="mb-5">
+                                    <legend class="text-white-50 custom-fontsize-bigger fw-bold">Koordinaten</legend>
                                     <!-- DROPDOWN gender -->
                                     <div class="form-outline form-white mb-4 col-xl-4">
                                         <label for="example-select"
@@ -187,8 +188,8 @@
                                 </fieldset>
 
                                 <!-- Radiobuttons for the Region -->
-                                <fieldset>
-                                    <legend class="text-white-50">Region (*):</legend>
+                                <fieldset class="mb-5">
+                                    <legend class="text-white-50 custom-fontsize-bigger fw-bold">Region (*):</legend>
                                     <div class="form-check">
                                         <p>
                                             <input class="form-check-input" type="radio" name="region" id="rb_murica"
@@ -219,16 +220,33 @@
                                 </fieldset>
                                 <!-- Radiobuttons for the Region //DONE// -->
 
-                                <div class="text-center">
-                                    <button class="btn btn-outline-light btn-lg px-5"
-                                        type="submit">Registrieren</button>
-                                </div>
+                                <fieldset class="mb-5">
+                                    <legend class="text-white-50 custom-fontsize-bigger fw-bold">Wichtige Informationen
+                                    </legend>
+                                    <p class="text-white-50 custom-fontsize">Ihre Daten werden vertraulich behandelt.
+                                        Die Anmeldung ist
+                                        verbindlich. Sollten Sie nicht teilnehmen können, melden Sie sich bitte
+                                        mindestens 24h im Voraus ab. Ansonsten werden die Kosten verrechnet. Der Kurs
+                                        findet nur bei schönem Wetter statt und bei mindestens 3 Teilnehmern. 1 Woche
+                                        vor Kursbeginn erhalten Sie weitere Informationen.</p>
+                                    <label for="chk_agb" class="text-white-50 custom-fontsize"><input name="chk_agb"
+                                            id="chk_agb" type="checkbox"> Ich habe
+                                        die AGB gelesen</label>
+
+
+
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-light btn-lg px-5"
+                                            type="submit">Registrieren</button>
+                                    </div>
+                                </fieldset>
                             </form>
 
                         </div>
                         <div class="text-center">
-                            <p class="text-white-50">Account bereits vorhanden? <a href="../index.html#loginForm"
-                                    class="text-white-50 fw-bold">Anmelden</a>
+                            <p class="text-white-50 custom-fontsize">Account bereits vorhanden? <a
+                                    href="../index.html#loginForm"
+                                    class="text-white-50 fw-bold custom-fontsize">Anmelden</a>
                             </p>
                         </div>
 
@@ -242,17 +260,4 @@
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/jquery.validate.password.js"></script>
     <script src="../js/validate.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
-
-                if (scroll >= 100) {
-                    $(".navbar").addClass("navbar-scrolled");
-                } else {
-                    $(".navbar").removeClass("navbar-scrolled");
-                }
-            });
-        });
-    </script>
 </body>

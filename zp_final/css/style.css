@@ -133,5 +133,8 @@ label.valid {
 
 .custom-fontsize {
     font-size: 20px;
+}
 
+.custom-fontsize-bigger {
+    font-size: 24px;
 }
