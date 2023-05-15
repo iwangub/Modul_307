@@ -1,5 +1,19 @@
 $(document).ready(function () {
 	/////////////////////
+	// Scrolling Navbar //
+	$(window).scroll(function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 100) {
+			$(".navbar").addClass("navbar-scrolled");
+		} else {
+			$(".navbar").removeClass("navbar-scrolled");
+		}
+	});
+	/////////////////////
+
+
+	/////////////////////
 	// Regex for names //
 	jQuery.validator.addMethod("regex_namen", function (value, element) {
 		return this.optional(element) || /^[a-zA-ZüÜäÄöÖéèàâç ]*$/.test(value);
@@ -53,7 +67,7 @@ $(document).ready(function () {
 				regex_namen: true,
 				minlength: 3,
 				remote: {
-					url: "pages/user.php",
+					url: "php/user.php",
 					type: "post"
 				}
 			},
@@ -94,6 +108,10 @@ $(document).ready(function () {
 
 		rules: {
 
+			gender: {
+				required: true
+			},
+
 			username: {
 				required: true,
 				regex_namen: true,
@@ -117,7 +135,8 @@ $(document).ready(function () {
 			},
 
 			email: {
-				required: true
+				required: true,
+				regex_email: true
 			},
 
 			plz: {
@@ -146,6 +165,10 @@ $(document).ready(function () {
 
 		messages: {
 
+			gender: {
+				required: "Anrede angeben!"
+			},
+
 			username: {
 				required: "Benutzername angeben!",
 				minlength: "Mindestens 3 Zeichen!",
@@ -162,7 +185,8 @@ $(document).ready(function () {
 			},
 
 			email: {
-				required: "Email angeben!"
+				required: "Email angeben!",
+				regex_email: "Gültige Email Adresse angeben!"
 			},
 			plz: {
 				required: "PLZ anegeben!"

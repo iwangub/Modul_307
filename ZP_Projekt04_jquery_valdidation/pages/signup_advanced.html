@@ -60,12 +60,26 @@
 
 
 
-                                    <form id="formSignUp" action="#" method="POST">
-                                        <h2 class="fw-bold mb-2 text-uppercase">Regisitrierung</h2>
-                                        <p class="text-white-50 mb-5">Mit Stern(*) markier sind Pflichtfelder</p>
+                                    <form id="formSignUp" action="success.html" method="POST">
+                                        <h2 class="fw-bold mb-2 text-uppercase">Registrierung</h2>
+                                        <p class="text-white-50 mb-5">Mit Stern(*) markiert sind Pflichtfelder</p>
 
                                         <fieldset>
                                             <legend>Koordinaten</legend>
+
+                                            <!-- DROPDOWN gender -->
+                                            <div class="form-outline form-white mb-4 col-xl-4 mx-auto">
+                                                <label for="example-select" class="form-label">Anrede</label>
+                                                <select class="form-select form-select-sm"
+                                                    aria-label=".form-select-sm example" id="gender" name="gender">
+                                                    <option value="" selected disabled>Bitte Wählen..</option>
+                                                    <option value="male">Herr</option>
+                                                    <option value="female">Frau</option>
+                                                </select>
+                                            </div>
+                                            <!-- DROPDOWN gender //DONE//-->
+
+
                                             <!-- TEXTFIELD username -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="username">Benutzername*</label>
@@ -75,17 +89,6 @@
                                             </div>
                                             <!-- TEXTFIELD username //DONE//-->
 
-
-                                            <!-- DROPDOWN gender -->
-                                            <div class="form-outline form-white mb-4 col-xl-2 mx-auto">
-                                                <label for="example-select" class="form-label">Anrede</label>
-                                                <select class="form-select form-select-sm"
-                                                    aria-label=".form-select-sm example">
-                                                    <option value="male">Herr</option>
-                                                    <option value="female">Frau</option>
-                                                </select>
-                                            </div>
-                                            <!-- DROPDOWN gender //DONE//-->
 
                                             <!-- Textfield Name -->
                                             <div class="form-outline form-white mb-4">
@@ -114,15 +117,6 @@
                                             <!-- Textfield Address //DONE//-->
 
 
-                                            <!-- Textfield Mail -->
-                                            <div class="form-outline form-white mb-4">
-                                                <label class="form-label" for="email">Mail*</label>
-                                                <input type="text" name="email" id="email"
-                                                    class="form-control form-control-lg" />
-                                            </div>
-                                            <!-- Textfield Mail //DONE//-->
-
-
                                             <!-- Textfield PLZ -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label" for="adresse">PLZ*</label>
@@ -130,6 +124,15 @@
                                                     class="form-control form-control-lg" />
                                             </div>
                                             <!-- Textfield PLZ //DONE//-->
+
+
+                                            <!-- Textfield Mail -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label" for="email">Mail*</label>
+                                                <input type="text" name="email" id="email"
+                                                    class="form-control form-control-lg" />
+                                            </div>
+                                            <!-- Textfield Mail //DONE//-->
 
 
                                             <!-- Textfield Phone -->

@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -20,14 +18,19 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
+
+    <style>
+
+    </style>
+
 </head>
 
 <body id="page-top">
 
 
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container px-4 px-lg-5">
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-xxl-5">
             <a class="navbar-brand" href="../index.html"><i class="fa-solid fa-house" style="color: #5e6268;"></i></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -37,10 +40,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#loginForm">Login</a>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#loginForm">Anmelden</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Über uns</a></li>
                 </ul>
             </div>
         </div>
@@ -49,98 +52,162 @@
 
 
 
-    <!-- Login -->
+    <!-- Signup -->
 
     <div class="container">
-        <section class="vh-100 gradient-custom">
-            <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-12">
+        <section class="">
+            <div class="">
+                <div class="">
+                    <div class="col-12 ">
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
-                            <div class="card-body mx-20 p-5 text-center">
+                            <div class="card-body mx-20 p-5">
                                 <div class="mb-md-5 mt-md-4 pb-5">
 
-                                    <form action="#" onsubmit="return validate()" method="POST">
-                                        <h2 class="fw-bold mb-2 text-uppercase">New Account?</h2>
-                                        <p class="text-white-50 mb-5">Mit Stern(*) markier sind Pflichtfelder</p>
 
-                                        <div class="d-flex justify-content-center">
-                                            <div class="form-outline form-white mb-4 mx-5">
-                                                <label class="form-label" for="username">Benutzername*</label>
+
+                                    <form id="formSignUp" action="success.html" method="POST">
+                                        <h2 class="fw-bold mb-2 text-uppercase">Registrierung</h2>
+                                        <p class="text-white-50 mb-5">Mit Stern(*) markiert sind Pflichtfelder</p>
+
+                                        <fieldset>
+                                            <legend class="text-white-50">Koordinaten</legend>
+                                            <!-- DROPDOWN gender -->
+                                            <div class="form-outline form-white mb-4 col-xl-4">
+                                                <label for="example-select" class="form-label text-white-50">Anrede
+                                                    (*):</label>
+                                                <select class="form-select form-select-sm custom-input"
+                                                    aria-label=".form-select-sm example" id="gender" name="gender">
+                                                    <option value="" selected disabled>Bitte Wählen..</option>
+                                                    <option value="male">Herr</option>
+                                                    <option value="female">Frau</option>
+                                                </select>
+                                            </div>
+                                            <!-- DROPDOWN gender //DONE//-->
+
+
+                                            <!-- TEXTFIELD username -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50"
+                                                    for="username">Benutzername*</label>
                                                 <input type="text" name="username" id="username"
-                                                    placeholder="Benutzername..."
-                                                    class="form-control form-control-lg" />
-                                                <label id="usernameError" style="color:red;"></label>
+                                                    class="form-control form-control-lg custom-input" />
                                             </div>
+                                            <!-- TEXTFIELD username //DONE//-->
 
 
-                                            <div class="form-outline form-white mb-4 mx-5">
-                                                <label class="form-label" for="vname">Vorname*</label>
+                                            <!-- Textfield Name -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="vname">Vorname (*):</label>
                                                 <input type="text" name="vname" id="vname"
-                                                    class="form-control form-control-lg" />
-                                                <label id="vnameError" style="color:red;"></label>
+                                                    class="form-control form-control-lg custom-input" />
                                             </div>
-                                        </div>
-
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="nname">Nachname*</label>
-                                            <input type="text" name="nname" id="nname"
-                                                class="form-control form-control-lg" />
-                                            <label id="nnameError" style="color:red;"></label>
-                                        </div>
+                                            <!-- Textfield Name //DONE//-->
 
 
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="adresse">Adresse*</label>
-                                            <input type="text" name="adresse" id="adresse"
-                                                class="form-control form-control-lg" />
-                                            <label id="adresseError" style="color:red;"></label>
-                                        </div>
+                                            <!-- Textfield Lastame -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="nname">Nachname
+                                                    (*):</label>
+                                                <input type="text" name="nname" id="nname"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Textfield Lastame //DONE//-->
 
 
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="email">Mail*</label>
-                                            <input type="text" name="email" id="email"
-                                                class="form-control form-control-lg" />
-                                            <label id="emailError" style="color:red;"></label>
-                                        </div>
+                                            <!-- Textfield Address -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="adresse">Adresse*</label>
+                                                <input type="text" name="adresse" id="adresse"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Textfield Address //DONE//-->
 
 
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="adresse">PLZ*</label>
-                                            <input type="text" name="plz" id="plz"
-                                                class="form-control form-control-lg" />
-                                            <label id="plzError" style="color:red;"></label>
-                                        </div>
+                                            <!-- Textfield PLZ -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="adresse">PLZ*</label>
+                                                <input type="text" name="plz" id="plz"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Textfield PLZ //DONE//-->
 
 
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="phone">Telefon*</label>
-                                            <input type="text" name="phone" id="phone"
-                                                class="form-control form-control-lg" />
-                                            <label id="phoneError" style="color:red;"></label>
-                                        </div>
+                                            <!-- Textfield Mail -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="email">Mail*</label>
+                                                <input type="text" name="email" id="email"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Textfield Mail //DONE//-->
 
-                                        <div class="form-outline form-white mb-4">
-                                            <label class="form-label" for="password">Passwort*</label>
-                                            <input type="password" name="password" id="password"
-                                                class="form-control form-control-lg" />
-                                            <label id="passwordError" style="color:red;"></label>
-                                        </div>
 
-                                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                                            <!-- Textfield Phone -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="phone">Telefon*</label>
+                                                <input type="text" name="phone" id="phone"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Textfield Phone //DONE//-->
+
+
+                                            <!-- Password-type Password -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="password">Passwort*</label>
+                                                <input type="password" name="password" id="password"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Password-type Password //DONE// -->
+
+
+                                            <!-- Passwordstrength -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="password-meter-label text-white-50"
+                                                    for="password">Passwortstärke:</label>
+                                                <div class="password-meter">
+                                                    <div class="password-meter-message">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Passwordstrength //DONE// -->
+
+
+                                            <!-- Password-type Password -->
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label text-white-50" for="confirmPassword">Passwort
+                                                    bestätigen*</label>
+                                                <input type="password" name="confirmPassword" id="confirmPassword"
+                                                    class="form-control form-control-lg custom-input" />
+                                            </div>
+                                            <!-- Password-type Password //DONE// -->
+                                        </fieldset>
+
+                                        <!-- TESTING AREA -->
+
+                                        <fieldset>
+                                            <legend class="text-white-50">Region:</legend>
+                                            <div class="form-group form-white mb-4">
+                                                <label class="form-label" for="password">Testing*</label>
+                                                <input type="password" name="password" id="password"
+                                                    class="form-control form-control-lg" />
+                                            </div>
+
+                                            <div class="form-outline form-white mb-4">
+                                                <label class="form-label" for="password">Passwort*</label>
+                                                <input type="password" name="password" id="password"
+                                                    class="form-control form-control-lg" />
+                                            </div>
+                                        </fieldset>
+                                        <!-- TESTING AREA ## DONE ##-->
+
+                                        <button class="btn btn-outline-light btn-lg px-5"
+                                            type="submit">Registrieren</button>
                                     </form>
-
-
-
-
-
-
 
                                 </div>
                                 <div>
-                                    <p class="mb-0">Already have an account? <a href="../index.html#loginForm"
-                                            class="text-white-50 fw-bold">Login</a>
+                                    <p class="mb-0">Account bereits vorhanden? <a href="../index.html#loginForm"
+                                            class="text-white-50 fw-bold">Anmelden</a>
                                     </p>
                                 </div>
 
@@ -151,6 +218,22 @@
             </div>
         </section>
     </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/jquery.validate.password.js"></script>
+    <script src="../js/validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
 
-    <script src="../js/script.js"></script>
+                if (scroll >= 100) {
+                    $(".navbar").addClass("navbar-scrolled");
+                } else {
+                    $(".navbar").removeClass("navbar-scrolled");
+                }
+            });
+        });
+    </script>
 </body>

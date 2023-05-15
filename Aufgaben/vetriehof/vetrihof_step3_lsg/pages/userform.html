@@ -1,42 +1,56 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Registrierungsformular Vetrihof</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/font.css">
-        <style>
-            section#one {
-                text-align: left;
-            }
-            
-            label.error{color:#f23c3c}
-          label.valid{color:#91d64d;}
-          input.error{border-color:#f23c3c;color:#f23c3c; }
-          input.valid{border-color:#91d64d;}
-        </style>
+
+<head>
+    <title>Registrierungsformular Vetrihof</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <style>
+        section#one {
+            text-align: left;
+        }
+
+        label.error {
+            color: #f23c3c
+        }
+
+        label.valid {
+            color: #91d64d;
+        }
+
+        input.error {
+            border-color: #f23c3c;
+            color: #f23c3c;
+        }
+
+        input.valid {
+            border-color: #91d64d;
+        }
+    </style>
 </head>
-    <body>
-        <div id="wrapper">
-            <div id="top">
-                <div id="head"><a class="link" href="userform.html">Pensionsstall Vetrihof</a></div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="../index.html#home" class="smoothScroll">Home</a></li>
-                        <li><a href="../index.html#box" class="smoothScroll">Pferdeboxen</a></li>
-                        <li><a href="../index.html#gal" class="smoothScroll">Galerie</a></li>
-                        <li><a href="../index.html#kurs" class="smoothScroll">Kurse</a></li>
-                        <li><a href="userform.html">Mitglieder</a></li>
-                    </ul>
-                </nav>
-            
-            </div><!-- end top-->
-            <div id="content">
+
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <div id="head"><a class="link" href="userform.html">Pensionsstall Vetrihof</a></div>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html#home" class="smoothScroll">Home</a></li>
+                    <li><a href="../index.html#box" class="smoothScroll">Pferdeboxen</a></li>
+                    <li><a href="../index.html#gal" class="smoothScroll">Galerie</a></li>
+                    <li><a href="../index.html#kurs" class="smoothScroll">Kurse</a></li>
+                    <li><a href="userform.html">Mitglieder</a></li>
+                </ul>
+            </nav>
+
+        </div><!-- end top-->
+        <div id="content">
             <section id="one">
-            <a class="anchor" id="home"></a>
+                <a class="anchor" id="home"></a>
                 <h1>Mitgliederanmeldung Vetrihof</h1>
                 <p>Bitte füllen Sie die nachfolgenden Eingabefelder aus: </p>
                 <p>Felder mit (*) sind Pflichtfelder! </p>
@@ -49,7 +63,7 @@
                         </div>
                         <div class="form-group">
                             <label for="nname">Nachname (*):</label>
-                            <input class="form-control" type="text" name="nname" id="nname" >
+                            <input class="form-control" type="text" name="nname" id="nname">
                         </div>
                         <div class="form-group">
                             <label for="strasse">Strasse & Nummer:</label>
@@ -73,70 +87,74 @@
                         </div>
                         <div class="form-group">
                             <label for="username">Username wählen (*): </label>
-                            <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+                            <input class="form-control" type="text" name="username" id="username"
+                                placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label for="password">Passwort wählen (*): </label>
-                            <input class="form-control" type="password" name="password" id="password" placeholder="Passwort">
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Passwort">
                         </div>
                         <div class="form-group">
                             <label class="password-meter-label" for="password">Passwortstärke:</label>
-                                <div class="password-meter">
-                                    <div class="password-meter-message">
+                            <div class="password-meter">
+                                <div class="password-meter-message">
                                     &nbsp;
-                                    </div>
                                 </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="confirm_password">Passwort wiederholen (*): </label>
-                            <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Passwort wiederholen">
+                            <input class="form-control" type="password" name="confirm_password" id="confirm_password"
+                                placeholder="Passwort wiederholen">
                         </div>
                     </fieldset>
                     <fieldset><!--Angaben über Mitglieds-->
                         <legend>Reitart:</legend>
                         <div class="form-group">
                             <label for="reitweise">Reitweise:</label>
-                                <select class="form-control" id="reitweise" name="reitweise" multiple>
-                                  <option value="englisch">Englisch</option>
-                                  <option value="western">Western</option>
-                                  <option value="dressur">Dressur</option>
-                                  <option value="springen">Springen</option>
-                                </select>
+                            <select class="form-control" id="reitweise" name="reitweise" multiple>
+                                <option value="englisch">Englisch</option>
+                                <option value="western">Western</option>
+                                <option value="dressur">Dressur</option>
+                                <option value="springen">Springen</option>
+                            </select>
                         </div>
-                     </fieldset>
-                     <fieldset>
+                    </fieldset>
+                    <fieldset>
                         <legend>Über Sie:</legend>
                         <div class="form-group">
                             <label>Altersgruppe:</label>
-                                <input class="radio-inline" type="radio" name="alter" value="20-40">20-40
-                                <input class="radio-inline" type="radio" name="alter" value="41-60">41-60
-                                <input class="radio-inline" type="radio" name="alter" value="61-80">>60
+                            <input class="radio-inline" type="radio" name="alter" value="20-40">20-40
+                            <input class="radio-inline" type="radio" name="alter" value="41-60">41-60
+                            <input class="radio-inline" type="radio" name="alter" value="61-80">>60
                         </div>
                         <div class="form-group">
                             <label>Eigenes Pferd?</label>
-                                <input class="radio-inline" type="radio" name="horse" value="ja">JA
-                                <input class="radio-inline" type="radio" name="horse" value="nein">NEIN
+                            <input class="radio-inline" type="radio" name="horse" value="ja">JA
+                            <input class="radio-inline" type="radio" name="horse" value="nein">NEIN
                         </div>
                         <div class="form-group">
-                          <label for="message">Nachricht:</label>
+                            <label for="message">Nachricht:</label>
                             <textarea class="form-control" id="message" name="message"></textarea>
                         </div>
                         <div class="form-group">
-                          <label class="checkbox-inline" for="newsletter">Newsletter: </label>
+                            <label class="checkbox-inline" for="newsletter">Newsletter: </label>
                             <input name="newsletter" id="newsletter" value="" type="checkbox">
                             </label>
                         </div>
-                      </fieldset>
-                      <div class="form-group">
+                    </fieldset>
+                    <div class="form-group">
                         <button type="submit" class="btn btn-primary">Senden</button>
-                     </div>
+                    </div>
                 </form>
-                </section>
-                </div>
-            </div>
-            <script src="../js/jquery-3.1.1.js"></script>
-        <script src="../js/jquery.validate.min.js"></script>
-        <script src="../js/jquery.validate.password.js"></script>
-        <script src="../js/validate.js"></script>
-    </body>
+            </section>
+        </div>
+    </div>
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/jquery.validate.password.js"></script>
+    <script src="../js/validate.js"></script>
+</body>
+
 </html>

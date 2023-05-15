@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Landing Page Projektarbeit</title>
+    <title>AI - Weather Forecast</title>
 
     <!-- Copys from the GRAYSCALE theme -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -57,19 +57,15 @@
                         vorherzusagen<br />
                         Nie wieder ins Wasser fallende Ferien oder Skitouren ohne Neuschnee<br />
                         Nutzen Sie unsere neueste Technologie</h5>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-3">Melden Sie sich an um unser Wetterdienst
-                        zu nutzen</h2>
+                    <h5 class="text-white-50 mx-auto mt-2 mb-3">Melden Sie sich an um unser Wetterdienst
+                        zu nutzen</h5>
                     <a class="btn btn-secondary btn-lg myButton" href="#loginForm">Anmelden</a>
                 </div>
             </div>
         </div>
     </header>
 
-
-
-
     <!-- Login -->
-
     <div class="container" id="loginForm">
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
@@ -79,25 +75,26 @@
                             <div class="card-body p-5 text-center">
                                 <div class="mb-md-5 mt-md-4 pb-5">
 
-                                    <form id="formLogin" action="#" method="POST">
+                                    <form id="formLogin" action="pages/success.html" method="POST">
                                         <fieldset>
                                             <h2 class="fw-bold mb-2 text-uppercase">Anmeldung</h2>
                                             <p class="text-white-50 mb-5">Benutzername und Passwort eingeben!</p>
 
                                             <!-- USERNAME -->
                                             <div class="form-outline form-white mb-4">
-                                                <label class="form-label" for="username">Benutzername</label>
+                                                <label class="form-label text-white-50"
+                                                    for="username">Benutzername:</label>
                                                 <input type="text" name="username" id="username"
-                                                    class="form-control form-control-lg" />
+                                                    class="form-control form-control-lg custom-input" />
                                                 <label class="form-label errorMessage" for="usernameError"
                                                     id="usernameError"></label>
                                             </div>
 
                                             <!-- PASSWORD -->
                                             <div class="form-outline form-white mb-4">
-                                                <label class="form-label" for="password">Passwort</label>
+                                                <label class="form-label text-white-50" for="password">Passwort:</label>
                                                 <input type="password" name="passwd" id="passwd"
-                                                    class="form-control form-control-lg" />
+                                                    class="form-control form-control-lg custom-input" />
                                                 <label class="form-label errorMessage" for="passwdError"
                                                     id="passwdError"></label>
 
@@ -110,7 +107,8 @@
                                 </div>
 
                                 <div>
-                                    <p class="mb-0">Noch keinen Account? <a href="pages/signup_advanced.html"
+                                    <p class="mb-0 text-white-50">Noch keinen Account? <a
+                                            href="pages/signup_advanced.html"
                                             class="text-white-50 fw-bold">Registrieren</a>
                                     </p>
                                 </div>
