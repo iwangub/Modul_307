@@ -26,7 +26,7 @@ $(document).ready(function () {
 	// Regex for PLZ //
 	jQuery.validator.addMethod("regex_plz", function (value, element) {
 		return this.optional(element) || /^([0-9\s\(\)\+\-\/]{4,5})*$/.test(value);
-	}, "Nur Zahlen angeben!")
+	}, "Postleitzahl?")
 	jQuery.validator.classRuleSettings.regex_plz = { regex_plz: true };
 	/////////////////////
 
@@ -163,7 +163,8 @@ $(document).ready(function () {
 			phone: {
 				required: true,
 				regex_phone: true,
-				minlength: 7
+				minlength: 10,
+				maxlength: 20
 			},
 
 			password: {
@@ -173,7 +174,17 @@ $(document).ready(function () {
 				required: true,
 				equalTo: "#password"
 
+			},
+
+			chk_agb: {
+				required: true
 			}
+
+
+
+
+
+
 		},
 
 		success: function (element) {
@@ -213,13 +224,15 @@ $(document).ready(function () {
 				regex_email: "Gültige Email Adresse angeben!"
 			},
 			plz: {
-				required: "PLZ anegeben!",
-				minlength: "Mindestens 4 Zeichen!"
+				required: "Bitte eine 4stellige Postleitzahl eigeben",
+				regex_plz: "Bitte eine 4 oder 5stellige Zahl"
 
 			},
 			phone: {
 				required: "Telefon angeben!",
-				minlength: "Mindestens 7 Zeichen!"
+				minlength: "Mindestens 10 Zeichen!",
+				maxlength: "Maximal 20 Zeichen!",
+
 
 			},
 
@@ -230,6 +243,9 @@ $(document).ready(function () {
 			confirmPassword: {
 				required: "Passwort bestätigen!",
 				equalTo: "Passwort muss übereinstimmen!"
+			},
+			chk_agb: {
+				required: "Bitte den AGB zustimmen!"
 			}
 		},
 
