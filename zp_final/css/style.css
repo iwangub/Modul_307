@@ -13,6 +13,10 @@ body {
     background-color: black !important;
 }
 
+/* Always black background for Nav */
+.navbar-scrolled-always {
+    background-color: black !important;
+}
 
 /* Navbar Styling */
 .nav {
