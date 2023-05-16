@@ -3,7 +3,6 @@ $(document).ready(function () {
 	// Scrolling Navbar //
 	$(window).scroll(function () {
 		var scroll = $(window).scrollTop();
-
 		if (scroll >= 100) {
 			$(".navbar").addClass("navbar-scrolled");
 		} else {
@@ -57,6 +56,7 @@ $(document).ready(function () {
 	jQuery.validator.classRuleSettings.regex_street = { regex_street: true };
 	/////////////////////
 
+
 	/////////////////////
 	// Regex for phone //
 	jQuery.validator.addMethod("regex_phone", function (value, element) {
@@ -65,11 +65,11 @@ $(document).ready(function () {
 	jQuery.validator.classRuleSettings.regex_phone = { regex_phone: true };
 	/////////////////////
 
+
 	//// Login validation ////
 	$("#formLogin").validate({
-
 		rules: {
-
+			// Rules for Username, required, regex, minlegth 3 and check php file for used usernames
 			username: {
 				required: true,
 				regex_name: true,
@@ -79,47 +79,44 @@ $(document).ready(function () {
 					type: "post"
 				}
 			},
+			// rules for passwd, required
 			passwd: {
 				required: true
 			}
 		},
-
 		success: function (element) {
 			element
 				.text('OK!').addClass('valid')
 				.closest('.control-group').removeClass('error').addClass('success');
 		},
-
 		messages: {
-
+			// message for username
 			username: {
 				required: "Benutzername angeben!",
 				minlength: "Mindestens 3 Zeichen!",
 				remote: "Benutzername existiert bereits!"
 			},
+			// message for passwd
 			passwd: {
 				required: "Passwort angeben!"
 			}
 		},
-
+		// if it passes all conditions, the form will be submitted
 		submitHandler: function (form) {
-			window.location.href = "success.html";
 			form.submit();
 		}
 	});
 	//// Login validation DONE ////
 
 
-
 	//// Sign Up validation ////
 	$("#formSignUp").validate({
-
 		rules: {
-
+			// rule for gender, required
 			gender: {
 				required: true
 			},
-
+			// rule for username, required, regex, minlength 3 and check php file for used usernames
 			username: {
 				required: true,
 				regex_name: true,
@@ -129,126 +126,119 @@ $(document).ready(function () {
 					type: "post"
 				}
 			},
-
+			// rule for name, requred, regex and minlength 2
 			vname: {
 				required: true,
 				regex_name: true,
 				minlength: 2
 			},
-
+			// rule for lastname, required, regex and minlegth 2
 			nname: {
 				required: true,
 				regex_name: true,
 				minlength: 2
 			},
-
+			// rule for address, required, regex and minlegth 2
 			adresse: {
 				required: true,
 				regex_street: true,
 				minlength: 2
-
 			},
-
+			// rule for email, required and email
 			email: {
 				required: true,
 				regex_email: true
 			},
-
+			// rule for plz, required, regex and minlength 4
 			plz: {
 				required: true,
 				regex_plz: true,
 				minlength: 4
 			},
-
+			// rule for phone, required, regex, minlegth 10 and maxlength 20
 			phone: {
 				required: true,
 				regex_phone: true,
 				minlength: 10,
 				maxlength: 20
 			},
-
+			// rule for passwd, required
 			password: {
 				required: true
 			},
+			// rule for confirm passwd, required and equalto the passwd above
 			confirmPassword: {
 				required: true,
 				equalTo: "#password"
-
 			},
-
+			// rule for agb, required
 			chk_agb: {
 				required: true
 			}
-
-
-
-
-
-
 		},
-
 		success: function (element) {
 			element
 				.text('OK!').addClass('valid')
 				.closest('.control-group').removeClass('error').addClass('success');
 		},
-
+		// all messages which do not fulfill the regex are described above in the functions
 		messages: {
-
+			// message for gender if not selected
 			gender: {
 				required: "Anrede angeben!"
 			},
-
+			// messages for username if blank, length or not matching to php file
 			username: {
 				required: "Benutzername angeben!",
 				minlength: "Mindestens 3 Zeichen!",
 				remote: "Benutzername existiert bereits!"
 			},
+			// messages for name if blank or too short
 			vname: {
 				required: "Vornamen angeben!",
 				minlength: "Mindestens 2 Zeichen!"
 			},
+			// messages for lastname if blank or too short
 			nname: {
 				required: "Nachnamen angeben!",
 				minlength: "Mindestens 2 Zeichen!"
-
 			},
+			// messages for address if blank or too short
 			adresse: {
 				required: "Adresse angeben!",
 				minlength: "Mindestens 2 Zeichen!"
-
 			},
-
+			// messages for email if blank or not matching regex
 			email: {
 				required: "Email angeben!",
 				regex_email: "Gültige Email Adresse angeben!"
 			},
+			// messages for plz if blank or not matching regex
 			plz: {
-				required: "Bitte eine 4stellige Postleitzahl eigeben",
-				regex_plz: "Bitte eine 4 oder 5stellige Zahl"
-
+				required: "4 oder 5 stellige Zahl angeben!",
+				regex_plz: "4 oder 5 stellige Zahl angeben!"
 			},
+			// messages for phone if blank or not matching length
 			phone: {
 				required: "Telefon angeben!",
 				minlength: "Mindestens 10 Zeichen!",
 				maxlength: "Maximal 20 Zeichen!",
-
-
 			},
-
+			// message for passwd if blank
 			password: {
 				required: "Passwort angeben!"
 			},
-
+			// message for confirmPasswd if blank or not matching the passwd above
 			confirmPassword: {
 				required: "Passwort bestätigen!",
 				equalTo: "Passwort muss übereinstimmen!"
 			},
+			// message for agb if blank
 			chk_agb: {
 				required: "Bitte den AGB zustimmen!"
 			}
 		},
-
+		// if it passes all conditions, the form will be submitted
 		submitHandler: function (form) {
 			form.submit();
 		}

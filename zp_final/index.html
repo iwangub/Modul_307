@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>AI - Weather Forecast</title>
-
-    <!-- Copys from the GRAYSCALE theme -->
+    <!-- Imports for the GRAYSCALE theme -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
@@ -65,7 +59,7 @@
         </div>
     </header>
 
-    <!-- Login -->
+    <!-- Login Styles -->
     <div class="container" id="loginForm">
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
@@ -74,13 +68,12 @@
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
                             <div class="card-body p-5 text-center">
                                 <div class="mb-md-5 mt-md-4 pb-5">
-
+                                    <!-- LoginForm -->
                                     <form id="formLogin" action="pages/success_login.html" method="POST">
                                         <fieldset>
                                             <h2 class="fw-bold mb-2 text-uppercase">Anmeldung</h2>
                                             <p class="text-white-50 custom-fontsize fw-bold mb-5">Benutzername und
                                                 Passwort eingeben!</p>
-
                                             <!-- USERNAME -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label text-white-50 custom-fontsize"
@@ -90,7 +83,6 @@
                                                 <label class="form-label errorMessage" for="usernameError"
                                                     id="usernameError"></label>
                                             </div>
-
                                             <!-- PASSWORD -->
                                             <div class="form-outline form-white mb-4">
                                                 <label class="form-label text-white-50 custom-fontsize"
@@ -99,22 +91,18 @@
                                                     class="form-control form-control-lg custom-input" />
                                                 <label class="form-label errorMessage" for="passwdError"
                                                     id="passwdError"></label>
-
                                             </div>
-
                                             <button class="btn btn-outline-light btn-lg px-5"
                                                 type="submit">Anmelden</button>
                                         </fieldset>
                                     </form>
                                 </div>
-
                                 <div>
                                     <p class="mb-0 text-white-50 custom-fontsize fw-bold custom-fontsize fw-bold">Noch
                                         keinen Account? <a href="pages/signup.html"
                                             class="text-white-50 fw-bold">Registrieren</a>
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -122,6 +110,8 @@
             </div>
         </section>
     </div>
+    <!-- Login card done -->
+    <!-- Import all JS files -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery.validate.min.js"></script>

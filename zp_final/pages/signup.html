@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>Landing Page Projektarbeit</title>
-
-    <!-- Copys from the GRAYSCALE theme -->
+    <title>AI - Weather Forecast</title>
+    <!-- Imports for the GRAYSCALE theme -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
@@ -46,23 +42,24 @@
     </nav>
 
 
-
-
-    <!-- Signup -->
+    <!-- Signup Styles -->
     <div class="background">
         <div class="container">
-            <div class="col-12 mb-5">
+            <div class="col-12 mb-2">
                 <div class="card bg-dark text-white" style="border-radius: 1rem;">
                     <div class="card-body mx-20 p-5">
-                        <div class="mb-md-5 mt-md-4 pb-5">
+                        <div class="mb-md-0 mt-md-4 pb-5">
+                            <!-- Form SignUp -->
                             <form id="formSignUp" action="success_signup.html" method="POST">
                                 <h2 class="fw-bold mb-2 text-uppercase">Registrierung</h2>
-                                <p class="text-white-50 mb-5 custom-fontsize">Mit Stern(*) markiert sind Pflichtfelder
+                                <p class="text-white-50 mb-5 custom-fontsize">Mit Stern(*) markiert sind
+                                    Pflichtfelder
                                 </p>
-
                                 <fieldset class="mb-5">
                                     <legend class="text-white-50 custom-fontsize-bigger fw-bold">Koordinaten</legend>
-                                    <!-- DROPDOWN gender -->
+
+
+                                    <!-- Dropdown gender -->
                                     <div class="form-outline form-white mb-4 col-xl-4">
                                         <label for="example-select"
                                             class="form-label text-white-50 custom-fontsize">Anrede
@@ -74,10 +71,10 @@
                                             <option value="female">Frau</option>
                                         </select>
                                     </div>
-                                    <!-- DROPDOWN gender //DONE//-->
+                                    <!-- Dropdown gender //DONE//-->
 
 
-                                    <!-- TEXTFIELD username -->
+                                    <!-- Textfield username -->
                                     <div class="form-outline form-white mb-4">
                                         <label class="form-label text-white-50 custom-fontsize"
                                             for="username">Benutzername
@@ -85,7 +82,7 @@
                                         <input type="text" name="username" id="username"
                                             class="form-control form-control-lg custom-input" autofocus />
                                     </div>
-                                    <!-- TEXTFIELD username //DONE//-->
+                                    <!-- Textfield username //DONE//-->
 
 
                                     <!-- Textfield Name -->
@@ -182,6 +179,7 @@
                                     <!-- Password-type Password //DONE// -->
                                 </fieldset>
 
+
                                 <!-- Radiobuttons for the Region -->
                                 <fieldset class="mb-5">
                                     <legend class="text-white-50 custom-fontsize-bigger fw-bold">Region (*):</legend>
@@ -214,7 +212,6 @@
                                     </div>
                                 </fieldset>
                                 <!-- Radiobuttons for the Region //DONE// -->
-
                                 <fieldset class="mb-5">
                                     <legend class="text-white-50 custom-fontsize-bigger fw-bold">Wichtige Informationen
                                     </legend>
@@ -228,16 +225,12 @@
                                     <label id="id_agb" for="chk_agb" class="text-white-50 custom-fontsize fw-bold"> Ich
                                         habe die AGB gelesen (*): </label>
                                     <input name="chk_agb" id="chk_agb" type="checkbox" />
-
-
-
                                     <div class="text-center">
                                         <button class="btn btn-outline-light btn-lg px-5 mt-5"
                                             type="submit">Registrieren</button>
                                     </div>
                                 </fieldset>
                             </form>
-
                         </div>
                         <div class="text-center">
                             <p class="text-white-50 custom-fontsize">Account bereits vorhanden? <a
@@ -245,12 +238,15 @@
                                     class="text-white-50 fw-bold custom-fontsize">Anmelden</a>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Signup done -->
+
+
+    <!-- Import all JS files -->
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-3.1.1.js"></script>
     <script src="../js/jquery.validate.min.js"></script>

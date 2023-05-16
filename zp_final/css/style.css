@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald&display=swap');
-
-
-/* font-family: 'Nunito', sans-serif; */
+/* Notes which font to use
+ font-family: 'Nunito', sans-serif; */
 
 
 body {
     background-color: #000;
 }
 
+
 /* Scrolling Navbar */
 .navbar-scrolled {
     background-color: black !important;
 }
 
-/* Navbar Styling */
 
+/* Navbar Styling */
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +32,6 @@ body {
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
-
 
 nav a,
 #loginForm {
@@ -94,16 +93,15 @@ nav a,
     }
 }
 
-
 .myButton {
     padding-left: 25px;
     padding-right: 25px;
 }
 
-/* change form colors */
+
+/* change form-input color */
 .custom-input {
     background-color: #414549;
-    /*color: rgba(255, 255, 255, .5);*/
     color: rgba(255, 254, 254, 0.817);
 }
 
@@ -113,8 +111,8 @@ nav a,
 
 }
 
-/* Jquery Validation StyleChanges */
 
+/* Jquery Validation StyleChanges */
 label.error {
     color: rgba(230, 119, 119, 0.675);
     text-shadow: #000;
@@ -127,10 +125,8 @@ label.valid {
     font-size: larger;
 }
 
-/* Jquery Validation StyleChanges DONE */
 
-/* testint */
-
+/* custom fontsize, used here and there */
 .custom-fontsize {
     font-size: 20px;
 }
