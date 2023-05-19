@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald&display=swap');
 /* Notes which font to use
  font-family: 'Nunito', sans-serif; */
+/*  TESTING CONFIRMATION */
+
+.confirmationHook {
+
+    width: 150x;
+    height: 130px;
+    background-image: url('../assets/confirmation_hook.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-size: 30% auto;
+}
+
+/* TESTING CONFIRMATION */
+
 
 
 body {

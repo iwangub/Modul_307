@@ -69,7 +69,8 @@
                             <div class="card-body p-5 text-center">
                                 <div class="mb-md-5 mt-md-4 pb-5">
                                     <!-- LoginForm -->
-                                    <form id="formLogin" action="pages/success_login.html" method="POST">
+                                    <form id="formLogin" action="pages/success_login.html" method="POST"
+                                        onsubmit="return validateForm()">
                                         <fieldset>
                                             <h2 class="fw-bold mb-2 text-uppercase">Anmeldung</h2>
                                             <p class="text-white-50 custom-fontsize fw-bold mb-5">Benutzername und
@@ -112,7 +113,10 @@
     </div>
     <!-- Login card done -->
     <!-- Import all JS files -->
+    <!--
     <script src="js/jquery.js"></script>
+-->
+
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.validate.password.js"></script>

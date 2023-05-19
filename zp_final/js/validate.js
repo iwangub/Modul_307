@@ -73,11 +73,7 @@ $(document).ready(function () {
 			username: {
 				required: true,
 				regex_name: true,
-				minlength: 3,
-				remote: {
-					url: "php/user.php",
-					type: "post"
-				}
+				minlength: 3
 			},
 			// rules for passwd, required
 			passwd: {
@@ -94,7 +90,7 @@ $(document).ready(function () {
 			username: {
 				required: "Benutzername angeben!",
 				minlength: "Mindestens 3 Zeichen!",
-				remote: "Benutzername existiert bereits!"
+				remote: "Benutzername nicht verfügbar!"
 			},
 			// message for passwd
 			passwd: {
@@ -103,7 +99,13 @@ $(document).ready(function () {
 		},
 		// if it passes all conditions, the form will be submitted
 		submitHandler: function (form) {
-			form.submit();
+			let user = $('#username').val();
+			let passwd = $('#passwd').val();
+			if (user === 'admin' && passwd === 'SecureShell') {
+				form.submit();
+			} else {
+				alert('Ungültiger Benutzername oder Passwort!');
+			}
 		}
 	});
 	//// Login validation DONE ////
