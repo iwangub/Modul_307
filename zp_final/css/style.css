@@ -154,3 +154,8 @@ label.valid {
     background-position: center center;
     background-size: 30% auto;
 }
+
+/* adjust color for accessibility */
+.text-white-50 {
+    color: rgb(203, 200, 200) !important;
+}
