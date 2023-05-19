@@ -146,7 +146,6 @@ label.valid {
 
 /*  Styling for Login and SignUp success */
 .confirmationHook {
-
     width: 150x;
     height: 130px;
     background-image: url('../assets/confirmation_hook.png');
