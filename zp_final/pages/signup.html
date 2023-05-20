@@ -50,7 +50,7 @@
                     <div class="card-body mx-20 p-5">
                         <div class="mb-md-0 mt-md-4 pb-5">
                             <!-- Form SignUp -->
-                            <form id="formSignUp" action="success_signup.html" method="POST">
+                            <form id="formSignUp" action="success_signup.html" method="POST" novalidate>
                                 <h2 class="fw-bold mb-2 text-uppercase">Registrierung</h2>
                                 <p class="text-white-50 mb-5 custom-fontsize">Mit Stern(*) markiert sind
                                     Pflichtfelder
@@ -123,6 +123,9 @@
                                     <div class="form-outline form-white mb-4">
                                         <label class="form-label text-white-50 custom-fontsize" for="email">Mail
                                             (*):</label>
+
+                                        <!--TYPE: email!  -->
+
                                         <input type="text" name="email" id="email"
                                             class="form-control form-control-lg custom-input" />
                                     </div>
@@ -241,7 +244,6 @@
 
 
     <!-- Import all JS files -->
-    <script src="../js/jquery.js"></script>
     <script src="../js/jquery-3.1.1.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/jquery.validate.password.js"></script>

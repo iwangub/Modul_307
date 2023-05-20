@@ -197,12 +197,12 @@ $(document).ready(function () {
 			},
 			// messages for name if blank or too short
 			vname: {
-				required: "Vornamen angeben!",
+				required: "Vorname angeben!",
 				minlength: "Mindestens 2 Zeichen!"
 			},
 			// messages for lastname if blank or too short
 			nname: {
-				required: "Nachnamen angeben!",
+				required: "Nachname angeben!",
 				minlength: "Mindestens 2 Zeichen!"
 			},
 			// messages for address if blank or too short
