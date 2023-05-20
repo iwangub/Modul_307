@@ -147,7 +147,7 @@ $(document).ready(function () {
 				minlength: 2
 			},
 			// rule for email, required and email
-			email: {
+			emailSingUp: {
 				required: true,
 				regex_email: true
 			},
@@ -211,7 +211,7 @@ $(document).ready(function () {
 				minlength: "Mindestens 2 Zeichen!"
 			},
 			// messages for email if blank or not matching regex
-			email: {
+			emailSingUp: {
 				required: "Email angeben!",
 				regex_email: "Gültige Email Adresse angeben!"
 			},
